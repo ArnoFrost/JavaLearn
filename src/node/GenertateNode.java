@@ -1,4 +1,4 @@
-package listnode;
+package node;
 
 import java.util.Random;
 

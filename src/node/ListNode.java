@@ -1,4 +1,4 @@
-package listnode;
+package node;
 
 /**
  * @Author: ArnoFrost
@@ -15,6 +15,6 @@ public class ListNode {
 
     @Override
     public String toString() {
-        return "listnode val = " + val + ",node next =" + next;
+        return "node val = " + val + ",node next =" + next;
     }
 }

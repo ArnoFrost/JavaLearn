@@ -1,7 +1,6 @@
-import listnode.GenertateNode;
-import listnode.ListNode;
-import listnode.MergeTwoLists;
-import listnode.ReverseSingleNode;
+import node.GenertateNode;
+import node.ListNode;
+import node.MergeTwoLists;
 
 /**
  * @Author: ArnoFrost
@@ -16,9 +15,9 @@ public class TestLink {
         ListNode listNode = MergeTwoLists.mergeTwoListNew(listNode1, listNode2);
 
 //        ListNode listNode = ReverseSingleNode.revertSingleLinknode(GenertateNode.getRadomNode(2));
-//        listnode listNode = reverse3(getSimpleNode());
-//        listnode listNode = reverseLinkedList(getSimpleNode());
-//        listnode listNode = removeNthFromEnd(getSimpleNode(), 2);
+//        node listNode = reverse3(getSimpleNode());
+//        node listNode = reverseLinkedNodeNew(getSimpleNode());
+//        node listNode = removeNthFromEnd(getSimpleNode(), 2);
 
         System.out.println("listNode final = [" + listNode + "]");
     }

@@ -1,10 +1,10 @@
-package listnode;
+package node;
 
 /**
  * @Author: ArnoFrost
  * @Date: 2019-05-05 10:28
  * @Version 1.0
- * Code = 19. 删除链表倒数第N个节点
+ * Code ==> 19. 删除链表倒数第N个节点
  */
 public class RemoveNthFromEnd {
     public static ListNode removeNthFromEnd(ListNode head, int n) {

@@ -1,10 +1,10 @@
-package listnode;
+package node;
 
 /**
  * @Author: ArnoFrost
  * @Date: 2019-05-05 10:27
  * @Version 1.0
- * Code = 21. 合并两个有序链表
+ * Code ==> 21. 合并两个有序链表
  */
 public class MergeTwoLists {
 
