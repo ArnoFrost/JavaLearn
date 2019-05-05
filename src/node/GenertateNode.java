@@ -8,7 +8,7 @@ import java.util.Random;
  * @Version 1.0
  */
 public class GenertateNode {
-    public static ListNode getSimpleNode() {
+    public static ListNode getSimpleNode(boolean withHead) {
         ListNode linkListNode1 = new ListNode(1);
         ListNode linkListNode2 = new ListNode(2);
         ListNode linkListNode3 = new ListNode(3);
@@ -16,11 +16,24 @@ public class GenertateNode {
         ListNode linkListNode5 = new ListNode(5);
         ListNode linkListNode6 = new ListNode(6);
 
-        linkListNode1.next = linkListNode2;
-        linkListNode2.next = linkListNode3;
-        linkListNode3.next = linkListNode4;
-        linkListNode4.next = linkListNode5;
-        linkListNode5.next = linkListNode6;
+        if (withHead) {
+            ListNode head = new ListNode(0);
+            head.next = linkListNode1;
+            linkListNode1.next = linkListNode2;
+            linkListNode2.next = linkListNode3;
+            linkListNode3.next = linkListNode4;
+            linkListNode4.next = linkListNode5;
+            linkListNode5.next = linkListNode6;
+            System.out.println("node start = [" + head + "]");
+            return head;
+        } else {
+            linkListNode1.next = linkListNode2;
+            linkListNode2.next = linkListNode3;
+            linkListNode3.next = linkListNode4;
+            linkListNode4.next = linkListNode5;
+            linkListNode5.next = linkListNode6;
+        }
+
 
         System.out.println("node start = [" + linkListNode1 + "]");
         return linkListNode1;
