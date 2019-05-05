@@ -68,6 +68,36 @@ public class GenertateNode {
 
     }
 
+    public static ListNode getSimpleCycleNode(boolean withHead) {
+        ListNode linkListNode1 = new ListNode(1);
+        ListNode linkListNode2 = new ListNode(2);
+        ListNode linkListNode3 = new ListNode(3);
+        ListNode linkListNode4 = new ListNode(4);
+        ListNode linkListNode5 = new ListNode(5);
+
+        if (withHead) {
+            ListNode head = new ListNode(0);
+            head.next = linkListNode1;
+            linkListNode1.next = linkListNode2;
+            linkListNode2.next = linkListNode3;
+            linkListNode3.next = linkListNode4;
+            linkListNode4.next = linkListNode5;
+            linkListNode5.next = linkListNode2;
+            System.out.println("node start = [" + head.toString() + "]");
+            return head;
+        } else {
+            linkListNode1.next = linkListNode2;
+            linkListNode2.next = linkListNode3;
+            linkListNode3.next = linkListNode4;
+            linkListNode4.next = linkListNode5;
+            linkListNode5.next = linkListNode2;
+        }
+
+
+        System.out.println("node start = [" + linkListNode1.toString() + "]");
+        return linkListNode1;
+    }
+
     /**
      * 得到一个指定长度的随机链表
      *
