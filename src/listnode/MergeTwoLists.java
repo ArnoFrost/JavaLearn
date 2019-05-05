@@ -29,6 +29,39 @@ public class MergeTwoLists {
             cur.next = l1;
         }
         return dummyHead.next;
+    }
 
+    public static ListNode mergeTwoListNew(ListNode l1, ListNode l2) {
+        if (null == l1 && null == l2) {
+            return null;
+        } else if (null == l1) {
+            return l2;
+        } else if (null == l2) {
+            return l1;
+        } else {
+            final ListNode mockHeadNode = new ListNode(0);
+            ListNode currNode = mockHeadNode;
+            while (null != l1 || null != l2) {
+                if (null == l1) {
+                    //l1遍历完毕
+                    currNode.next = l2;
+                    break;
+                }
+                if (null == l2) {
+                    //l2遍历完毕
+                    currNode.next = l1;
+                    break;
+                }
+                if (l1.val <= l2.val) {
+                    currNode.next = l1;
+                    l1 = l1.next;
+                } else {
+                    currNode.next = l2;
+                    l2 = l2.next;
+                }
+                currNode = currNode.next;
+            }
+            return mockHeadNode.next;
+        }
     }
 }

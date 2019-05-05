@@ -10,9 +10,10 @@ import listnode.ReverseSingleNode;
  */
 public class TestLink {
     public static void main(String[] args) {
-        ListNode listNode1 = GenertateNode.getRadomNode(3);
-        ListNode listNode2 = GenertateNode.getRadomNode(3);
-        ListNode listNode = MergeTwoLists.mergeTwoLists(listNode1, listNode2);
+        ListNode listNode1 = GenertateNode.getRadomOrderNode(3);
+        ListNode listNode2 = GenertateNode.getRadomOrderNode(3);
+//        ListNode listNode = MergeTwoLists.mergeTwoLists(listNode1, listNode2);
+        ListNode listNode = MergeTwoLists.mergeTwoListNew(listNode1, listNode2);
 
 //        ListNode listNode = ReverseSingleNode.revertSingleLinknode(GenertateNode.getRadomNode(2));
 //        listnode listNode = reverse3(getSimpleNode());

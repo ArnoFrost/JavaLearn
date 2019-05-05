@@ -47,6 +47,24 @@ public class GenertateNode {
         return listNode.next;
     }
 
+    public static ListNode getRadomOrderNode(int length) {
+        ListNode listNode = new ListNode(0);
+        if (length >= 0) {
+            ListNode cur = listNode;
+
+            for (int i = 0; i < length; i++) {
+                int num = getRadomNumber(1, 10);
+                while (cur.val >= num) {
+                    num = getRadomNumber(1, 10);
+                }
+                cur.next = new ListNode(num);
+                cur = cur.next;
+            }
+        }
+        System.out.println("getRadomOrderNode = " + listNode.next);
+        return listNode.next;
+    }
+
     /**
      * 返回一个指定区间的随机数
      *
