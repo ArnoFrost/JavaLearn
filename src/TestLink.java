@@ -5,54 +5,80 @@
  */
 public class TestLink {
     public static void main(String[] args) {
-//        Node node = revertSingleLinknode(readyNode());
-//        Node node = reverse3(readyNode());
-//        Node node = reverseLinkedList(readyNode());
-        Node node = removeNthFromEnd(readyNode(), 2);
-        System.out.println("node final = [" + node + "]");
+//        ListNode listNode = revertSingleLinknode(readyNode());
+//        ListNode listNode = reverse3(readyNode());
+//        ListNode listNode = reverseLinkedList(readyNode());
+//        ListNode listNode = removeNthFromEnd(readyNode(), 2);
+//        System.out.println("listNode final = [" + listNode + "]");
+
 
     }
 
-    public static class Node {
-        int data;
-        Node next;
+    public static class ListNode {
+        int val;
+        ListNode next;
 
-        public Node(int data) {
-            this.data = data;
+        public ListNode(int val) {
+            this.val = val;
         }
 
         @Override
         public String toString() {
-            return "Node data = " + data + ",node next =" + next;
+            return "ListNode val = " + val + ",node next =" + next;
         }
     }
 
-    private static Node readyNode() {
-        Node linkNode1 = new Node(1);
-        Node linkNode2 = new Node(2);
-        Node linkNode3 = new Node(3);
-        Node linkNode4 = new Node(4);
-        Node linkNode5 = new Node(5);
-        Node linkNode6 = new Node(6);
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new ListNode(0);
+        ListNode cur = dummyHead;
 
-        linkNode1.next = linkNode2;
-        linkNode2.next = linkNode3;
-        linkNode3.next = linkNode4;
-        linkNode4.next = linkNode5;
-        linkNode5.next = linkNode6;
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                cur.next = l1;
+                cur = cur.next;
+                l1 = l1.next;
+            } else {
+                cur.next = l2;
+                cur = cur.next;
+                l2 = l2.next;
+            }
 
-        System.out.println("node start = [" + linkNode1 + "]");
-        return linkNode1;
+            if (l1 == null) {
+                cur.next = l2;
+            } else {
+                cur.next = l1;
+            }
+        }
+        return dummyHead.next;
 
     }
 
-    public static Node removeNthFromEnd(Node head, int n) {
-        Node dummy = new Node(0);
+    private static ListNode readyNode() {
+        ListNode linkListNode1 = new ListNode(1);
+        ListNode linkListNode2 = new ListNode(2);
+        ListNode linkListNode3 = new ListNode(3);
+        ListNode linkListNode4 = new ListNode(4);
+        ListNode linkListNode5 = new ListNode(5);
+        ListNode linkListNode6 = new ListNode(6);
+
+        linkListNode1.next = linkListNode2;
+        linkListNode2.next = linkListNode3;
+        linkListNode3.next = linkListNode4;
+        linkListNode4.next = linkListNode5;
+        linkListNode5.next = linkListNode6;
+
+        System.out.println("node start = [" + linkListNode1 + "]");
+        return linkListNode1;
+
+    }
+
+    public static ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode dummy = new ListNode(0);
         //dummy.next -> head
         dummy.next = head;
         int length = 0;
         //first -> head
-        Node first = head;
+        ListNode first = head;
         while (first != null) {
             length++;
             first = first.next;
@@ -76,11 +102,11 @@ public class TestLink {
     /**
      * 单链表翻转
      */
-    private static Node revertSingleLinknode(Node node) {
-        Node prev = null;
-        Node now = node;
+    private static ListNode revertSingleLinknode(ListNode listNode) {
+        ListNode prev = null;
+        ListNode now = listNode;
         while (now != null) {
-            Node next = now.next;
+            ListNode next = now.next;
             now.next = prev;
             prev = now;
             now = next;
@@ -91,40 +117,40 @@ public class TestLink {
         return prev;
     }
 
-    private Node reverse2(Node node, Node prev) {
-        if (node.next == null) {
-            node.next = prev;
-            return node;
+    private ListNode reverse2(ListNode listNode, ListNode prev) {
+        if (listNode.next == null) {
+            listNode.next = prev;
+            return listNode;
         } else {
-            Node re = reverse2(node.next, node);
-            node.next = prev;
+            ListNode re = reverse2(listNode.next, listNode);
+            listNode.next = prev;
             return re;
         }
     }
 
-    public static Node reverse3(Node node) {
-        if (node.next == null) {
-            System.out.println("node null = [" + node + "]");
-            return node;
+    public static ListNode reverse3(ListNode listNode) {
+        if (listNode.next == null) {
+            System.out.println("listNode null = [" + listNode + "]");
+            return listNode;
         }
-        Node next = node.next;
-        node.next = null;
-        Node re = reverse3(next);
-        next.next = node;
-        System.out.println("node = [" + node + "]");
+        ListNode next = listNode.next;
+        listNode.next = null;
+        ListNode re = reverse3(next);
+        next.next = listNode;
+        System.out.println("listNode = [" + listNode + "]");
         return re;
     }
 
-    public static Node reverseLinkedList(Node node) {
-        if (node == null || node.next == null) {
-            System.out.println("node null = [" + node + "]");
-            return node;
+    public static ListNode reverseLinkedList(ListNode listNode) {
+        if (listNode == null || listNode.next == null) {
+            System.out.println("listNode null = [" + listNode + "]");
+            return listNode;
         } else {
-            Node headNode = reverseLinkedList(node.next);
-            node.next.next = node;
-            node.next = null;
-            System.out.println("node = [" + node + "]");
-            return headNode;
+            ListNode headListNode = reverseLinkedList(listNode.next);
+            listNode.next.next = listNode;
+            listNode.next = null;
+            System.out.println("listNode = [" + listNode + "]");
+            return headListNode;
         }
     }
 }
