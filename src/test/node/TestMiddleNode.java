@@ -12,10 +12,11 @@ import node.MiddleNode;
  */
 public class TestMiddleNode extends TestCase {
     public void testMiddle() {
-        ListNode node = GenertateNode.getSimpleNode(true);
+//        ListNode node = GenertateNode.getSimpleNode(true);
+        ListNode node = GenertateNode.getNodeByNumber(false, 0, 2, 4, 5);
         node = MiddleNode.middleNode(node);
 
 //        assert (node.next.val == 4);
-        System.out.println("node.next  = " + node.next);
+        System.out.println("middleNode : " + node);
     }
 }

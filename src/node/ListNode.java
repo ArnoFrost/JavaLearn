@@ -13,8 +13,18 @@ public class ListNode {
         this.val = val;
     }
 
+    public String printList() {
+        if (next == null) {
+            return "node val = " + val + ",node next ==> null";
+        }
+        return "node val = " + val + ",node next ==> " + next.printList();
+    }
+
     @Override
     public String toString() {
-        return "node val = " + val + ",node next =" + next;
+        if (next == null) {
+            return "node val = " + val + ",node next = null";
+        }
+        return "val = " + val + ", next = " + next.val;
     }
 }

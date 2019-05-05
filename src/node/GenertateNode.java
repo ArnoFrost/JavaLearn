@@ -8,6 +8,34 @@ import java.util.Random;
  * @Version 1.0
  */
 public class GenertateNode {
+    /**
+     * 根据输入数字得到指定的单链表
+     *
+     * @param withHead
+     * @param numbers
+     * @return
+     */
+    public static ListNode getNodeByNumber(boolean withHead, int... numbers) {
+        if (numbers == null) {
+            return null;
+        }
+
+        ListNode listNode = new ListNode(0);
+        ListNode temp = listNode;
+
+        for (int number : numbers) {
+            temp.next = new ListNode(number);
+            temp = temp.next;
+        }
+        if (withHead) {
+            System.out.println("node start = [" + listNode.printList() + "]");
+            return listNode;
+        }
+        System.out.println("node start = [" + listNode.next.printList() + "]");
+        return listNode.next;
+
+    }
+
     public static ListNode getSimpleNode(boolean withHead) {
         ListNode linkListNode1 = new ListNode(1);
         ListNode linkListNode2 = new ListNode(2);
@@ -24,7 +52,7 @@ public class GenertateNode {
             linkListNode3.next = linkListNode4;
             linkListNode4.next = linkListNode5;
             linkListNode5.next = linkListNode6;
-            System.out.println("node start = [" + head + "]");
+            System.out.println("node start = [" + head.printList() + "]");
             return head;
         } else {
             linkListNode1.next = linkListNode2;
@@ -35,7 +63,7 @@ public class GenertateNode {
         }
 
 
-        System.out.println("node start = [" + linkListNode1 + "]");
+        System.out.println("node start = [" + linkListNode1.printList() + "]");
         return linkListNode1;
 
     }
@@ -56,7 +84,7 @@ public class GenertateNode {
                 cur = cur.next;
             }
         }
-        System.out.println("getRadomNode = " + listNode.next);
+        System.out.println("getRadomNode = " + listNode.next.printList());
         return listNode.next;
     }
 
@@ -74,7 +102,7 @@ public class GenertateNode {
                 cur = cur.next;
             }
         }
-        System.out.println("getRadomOrderNode = " + listNode.next);
+        System.out.println("getRadomOrderNode = " + listNode.next.printList());
         return listNode.next;
     }
 

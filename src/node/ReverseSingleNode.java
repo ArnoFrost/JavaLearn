@@ -28,8 +28,8 @@ public class ReverseSingleNode {
             prev = now;
             //当前指针后移
             now = next;
-            System.out.println("now =" + now);
-            System.out.println("prev =" + prev);
+            System.out.println("now =" + now.printList());
+            System.out.println("prev =" + prev.printList());
         }
 
         return prev;
@@ -37,13 +37,13 @@ public class ReverseSingleNode {
 
     public static ListNode reverseLinkedNodeNew(ListNode head) {
         if (head == null || head.next == null) {
-            System.out.println("listNode null = [" + head + "]");
+            System.out.println("listNode null = [" + head.printList() + "]");
             return head;
         } else {
             ListNode headListNode = reverseLinkedNodeNew(head.next);
             head.next.next = head;
             head.next = null;
-            System.out.println("listNode = [" + head + "]");
+            System.out.println("listNode = [" + head.printList() + "]");
             return headListNode;
         }
     }

@@ -25,7 +25,7 @@ public class RemoveNthFromEnd {
         while (length > 0) {
             length--;
             first = first.next;
-            System.out.println("first = " + first);
+            System.out.println("first = " + first.printList());
         }
 
         first.next = first.next.next;
