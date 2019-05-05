@@ -9,7 +9,7 @@ import java.util.Iterator;
  * @Version 1.0
  * 自定义链表栈结构
  */
-public class StackOfLinked<Item> implements Iterable<Item> {
+public class LinkStack<Item> implements Iterable<Item> {
     private class Node {
         Item item;
         Node next;
@@ -18,7 +18,7 @@ public class StackOfLinked<Item> implements Iterable<Item> {
     private Node first;
     private int n;
 
-    public StackOfLinked() {
+    public LinkStack() {
     }
 
     public void push(Item item) {

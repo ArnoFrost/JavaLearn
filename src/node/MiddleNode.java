@@ -27,12 +27,12 @@ package node;
  * 给定链表的结点数介于 1 和 100 之间。
  */
 public class MiddleNode {
-    public static ListNode middleNode(ListNode head) {
+    public static ListNode middleNode(ListNode<Integer> head) {
         if (head == null) {
             return null;
         }
         ListNode[] temp = new ListNode[100];
-        ListNode cur = head;
+        ListNode<Integer> cur = head;
         int index = 0;
         while (cur != null) {
             temp[index] = cur;
@@ -48,8 +48,8 @@ public class MiddleNode {
      * @param head
      * @return
      */
-    public static ListNode middleNodeSlowFast(ListNode head) {
-        ListNode slow = head, fast = head;
+    public static ListNode<Integer> middleNodeSlowFast(ListNode<Integer> head) {
+        ListNode<Integer> slow = head, fast = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;

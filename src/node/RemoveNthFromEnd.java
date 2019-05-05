@@ -17,13 +17,13 @@ package node;
  * 给定的 n 保证是有效的。
  */
 public class RemoveNthFromEnd {
-    public static ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0);
+    public static ListNode<Integer> removeNthFromEnd(ListNode<Integer> head, int n) {
+        ListNode<Integer> dummy = new ListNode<>();
         //dummy.next -> head
         dummy.next = head;
         int length = 0;
         //first -> head
-        ListNode first = head;
+        ListNode<Integer> first = head;
         while (first != null) {
             length++;
             first = first.next;

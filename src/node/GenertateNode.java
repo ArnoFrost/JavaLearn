@@ -15,16 +15,16 @@ public class GenertateNode {
      * @param numbers
      * @return
      */
-    public static ListNode getNodeByNumber(boolean withHead, int... numbers) {
+    public static ListNode<Integer> getNodeByNumber(boolean withHead, int... numbers) {
         if (numbers == null) {
             return null;
         }
 
-        ListNode listNode = new ListNode(0);
-        ListNode temp = listNode;
+        ListNode<Integer> listNode = new ListNode<>();
+        ListNode<Integer> temp = listNode;
 
         for (int number : numbers) {
-            temp.next = new ListNode(number);
+            temp.next = new ListNode<>(number);
             temp = temp.next;
         }
         if (withHead) {
@@ -36,17 +36,16 @@ public class GenertateNode {
 
     }
 
-    public static ListNode getSimpleNode(boolean withHead) {
-        ListNode linkListNode1 = new ListNode(1);
-        ListNode linkListNode2 = new ListNode(2);
-        ListNode linkListNode3 = new ListNode(3);
-        ListNode linkListNode4 = new ListNode(4);
-        ListNode linkListNode5 = new ListNode(5);
-        ListNode linkListNode6 = new ListNode(6);
+    public static ListNode<Integer> getSimpleNode(boolean withHead) {
+        ListNode<Integer> linkListNode1 = new ListNode<>(1);
+        ListNode<Integer> linkListNode2 = new ListNode<>(2);
+        ListNode<Integer> linkListNode3 = new ListNode<>(3);
+        ListNode<Integer> linkListNode4 = new ListNode<>(4);
+        ListNode<Integer> linkListNode5 = new ListNode<>(5);
+        ListNode<Integer> linkListNode6 = new ListNode<>(6);
 
         if (withHead) {
-            ListNode head = new ListNode(0);
-            head.next = linkListNode1;
+            ListNode<Integer> head = new ListNode<>();
             linkListNode1.next = linkListNode2;
             linkListNode2.next = linkListNode3;
             linkListNode3.next = linkListNode4;
@@ -68,15 +67,15 @@ public class GenertateNode {
 
     }
 
-    public static ListNode getSimpleCycleNode(boolean withHead) {
-        ListNode linkListNode1 = new ListNode(1);
-        ListNode linkListNode2 = new ListNode(2);
-        ListNode linkListNode3 = new ListNode(3);
-        ListNode linkListNode4 = new ListNode(4);
-        ListNode linkListNode5 = new ListNode(5);
+    public static ListNode<Integer> getSimpleCycleNode(boolean withHead) {
+        ListNode<Integer> linkListNode1 = new ListNode<>(1);
+        ListNode<Integer> linkListNode2 = new ListNode<>(2);
+        ListNode<Integer> linkListNode3 = new ListNode<>(3);
+        ListNode<Integer> linkListNode4 = new ListNode<>(4);
+        ListNode<Integer> linkListNode5 = new ListNode<>(5);
 
         if (withHead) {
-            ListNode head = new ListNode(0);
+            ListNode<Integer> head = new ListNode<>();
             head.next = linkListNode1;
             linkListNode1.next = linkListNode2;
             linkListNode2.next = linkListNode3;
@@ -104,13 +103,13 @@ public class GenertateNode {
      * @param length
      * @return
      */
-    public static ListNode getRadomNode(int length) {
-        ListNode listNode = new ListNode(0);
+    public static ListNode<Integer> getRadomNode(int length) {
+        ListNode<Integer> listNode = new ListNode<>(0);
         if (length >= 0) {
             ListNode cur = listNode;
 
             for (int i = 0; i < length; i++) {
-                cur.next = new ListNode(getRadomNumber(1, 10));
+                cur.next = new ListNode<>(getRadomNumber(1, 10));
                 cur = cur.next;
             }
         }
@@ -118,17 +117,17 @@ public class GenertateNode {
         return listNode.next;
     }
 
-    public static ListNode getRadomOrderNode(int length) {
-        ListNode listNode = new ListNode(0);
+    public static ListNode<Integer> getRadomOrderNode(int length) {
+        ListNode<Integer> listNode = new ListNode<>(0);
         if (length >= 0) {
-            ListNode cur = listNode;
+            ListNode<Integer> cur = listNode;
 
             for (int i = 0; i < length; i++) {
                 int num = getRadomNumber(1, 10);
-                while (cur.val >= num) {
+                while ((Integer)cur.val >= num) {
                     num = getRadomNumber(1, 10);
                 }
-                cur.next = new ListNode(num);
+                cur.next = new ListNode<>(num);
                 cur = cur.next;
             }
         }

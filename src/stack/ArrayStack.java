@@ -8,12 +8,12 @@ import java.util.Iterator;
  * @Version 1.0
  * 自定义数组实现栈结构
  */
-public class StackOfArray<Item> implements Iterable<Item> {
+public class ArrayStack<Item> implements Iterable<Item> {
     Item[] a = (Item[]) new Object[10];
 
     int n = 0;
 
-    public StackOfArray() {
+    public ArrayStack() {
 
     }
 

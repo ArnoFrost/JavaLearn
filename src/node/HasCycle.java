@@ -34,8 +34,8 @@ import java.util.Set;
  */
 public class HasCycle {
 
-    public static boolean hasCycle(ListNode head) {
-        Set<ListNode> nodeSeen = new HashSet<>();
+    public static boolean hasCycle(ListNode<Integer> head) {
+        Set<ListNode<Integer>> nodeSeen = new HashSet<>();
         while (head != null) {
             if (nodeSeen.contains(head)) {
                 return true;
@@ -48,13 +48,13 @@ public class HasCycle {
         return false;
     }
 
-    public static boolean hasCycleSlowFast(ListNode head) {
+    public static boolean hasCycleSlowFast(ListNode<Integer> head) {
         if (head == null || head.next == null) {
             return false;
         }
 
-        ListNode slow = head;
-        ListNode fast = head.next;
+        ListNode<Integer> slow = head;
+        ListNode<Integer> fast = head.next;
         while (slow != fast) {
             if (fast == null || fast.next == null) {
                 return false;

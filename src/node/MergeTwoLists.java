@@ -14,9 +14,9 @@ package node;
  */
 public class MergeTwoLists {
 
-    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode dummyHead = new ListNode(0);
-        ListNode cur = dummyHead;
+    public static ListNode<Integer> mergeTwoLists(ListNode<Integer> l1, ListNode<Integer> l2) {
+        ListNode<Integer> dummyHead = new ListNode<>();
+        ListNode<Integer> cur = dummyHead;
 
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
@@ -37,7 +37,7 @@ public class MergeTwoLists {
         return dummyHead.next;
     }
 
-    public static ListNode mergeTwoListNew(ListNode l1, ListNode l2) {
+    public static ListNode<Integer> mergeTwoListNew(ListNode<Integer> l1, ListNode<Integer> l2) {
         if (null == l1 && null == l2) {
             return null;
         } else if (null == l1) {
