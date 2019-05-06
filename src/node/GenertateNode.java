@@ -24,15 +24,15 @@ public class GenertateNode {
         ListNode<Integer> temp = listNode;
 
         for (int number : numbers) {
-            temp.next = new ListNode<>(number);
-            temp = temp.next;
+            temp.setNext(new ListNode<>(number));
+            temp = temp.getNext();
         }
         if (withHead) {
             System.out.println("node start = [" + listNode.printList() + "]");
             return listNode;
         }
-        System.out.println("node start = [" + listNode.next.printList() + "]");
-        return listNode.next;
+        System.out.println("node start = [" + listNode.getNext().printList() + "]");
+        return listNode.getNext();
 
     }
 
@@ -46,19 +46,19 @@ public class GenertateNode {
 
         if (withHead) {
             ListNode<Integer> head = new ListNode<>();
-            linkListNode1.next = linkListNode2;
-            linkListNode2.next = linkListNode3;
-            linkListNode3.next = linkListNode4;
-            linkListNode4.next = linkListNode5;
-            linkListNode5.next = linkListNode6;
+            linkListNode1.setNext(linkListNode2);
+            linkListNode2.setNext(linkListNode3);
+            linkListNode3.setNext(linkListNode4);
+            linkListNode4.setNext(linkListNode5);
+            linkListNode5.setNext(linkListNode6);
             System.out.println("node start = [" + head.printList() + "]");
             return head;
         } else {
-            linkListNode1.next = linkListNode2;
-            linkListNode2.next = linkListNode3;
-            linkListNode3.next = linkListNode4;
-            linkListNode4.next = linkListNode5;
-            linkListNode5.next = linkListNode6;
+            linkListNode1.setNext(linkListNode2);
+            linkListNode2.setNext(linkListNode3);
+            linkListNode3.setNext(linkListNode4);
+            linkListNode4.setNext(linkListNode5);
+            linkListNode5.setNext(linkListNode6);
         }
 
 
@@ -76,20 +76,20 @@ public class GenertateNode {
 
         if (withHead) {
             ListNode<Integer> head = new ListNode<>();
-            head.next = linkListNode1;
-            linkListNode1.next = linkListNode2;
-            linkListNode2.next = linkListNode3;
-            linkListNode3.next = linkListNode4;
-            linkListNode4.next = linkListNode5;
-            linkListNode5.next = linkListNode2;
+            head.setNext(linkListNode1);
+            linkListNode1.setNext(linkListNode2);
+            linkListNode2.setNext(linkListNode3);
+            linkListNode3.setNext(linkListNode4);
+            linkListNode4.setNext(linkListNode5);
+            linkListNode5.setNext(linkListNode2);
             System.out.println("node start = [" + head.toString() + "]");
             return head;
         } else {
-            linkListNode1.next = linkListNode2;
-            linkListNode2.next = linkListNode3;
-            linkListNode3.next = linkListNode4;
-            linkListNode4.next = linkListNode5;
-            linkListNode5.next = linkListNode2;
+            linkListNode1.setNext(linkListNode2);
+            linkListNode2.setNext(linkListNode3);
+            linkListNode3.setNext(linkListNode4);
+            linkListNode4.setNext(linkListNode5);
+            linkListNode5.setNext(linkListNode2);
         }
 
 
@@ -109,12 +109,12 @@ public class GenertateNode {
             ListNode cur = listNode;
 
             for (int i = 0; i < length; i++) {
-                cur.next = new ListNode<>(getRadomNumber(1, 10));
-                cur = cur.next;
+                cur.setNext(new ListNode<>(getRadomNumber(1, 10)));
+                cur = cur.getNext();
             }
         }
-        System.out.println("getRadomNode = " + listNode.next.printList());
-        return listNode.next;
+        System.out.println("getRadomNode = " + listNode.getNext().printList());
+        return listNode.getNext();
     }
 
     public static ListNode<Integer> getRadomOrderNode(int length) {
@@ -124,15 +124,15 @@ public class GenertateNode {
 
             for (int i = 0; i < length; i++) {
                 int num = getRadomNumber(1, 10);
-                while ((Integer)cur.val >= num) {
+                while ((Integer) cur.getData() >= num) {
                     num = getRadomNumber(1, 10);
                 }
-                cur.next = new ListNode<>(num);
-                cur = cur.next;
+                cur.setNext(new ListNode<>(num));
+                cur = cur.getNext();
             }
         }
-        System.out.println("getRadomOrderNode = " + listNode.next.printList());
-        return listNode.next;
+        System.out.println("getRadomOrderNode = " + listNode.getNext().printList());
+        return listNode.getNext();
     }
 
     /**

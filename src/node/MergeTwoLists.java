@@ -19,22 +19,22 @@ public class MergeTwoLists {
         ListNode<Integer> cur = dummyHead;
 
         while (l1 != null && l2 != null) {
-            if (l1.val < l2.val) {
-                cur.next = l1;
-                cur = cur.next;
-                l1 = l1.next;
+            if (l1.getData() < l2.getData()) {
+                cur.setNext(l1);
+                cur = cur.getNext();
+                l1 = l1.getNext();
             } else {
-                cur.next = l2;
-                cur = cur.next;
-                l2 = l2.next;
+                cur.setNext(l2);
+                cur = cur.getNext();
+                l2 = l2.getNext();
             }
         }
         if (l1 == null) {
-            cur.next = l2;
+            cur.setNext(l2);
         } else {
-            cur.next = l1;
+            cur.setNext(l1);
         }
-        return dummyHead.next;
+        return dummyHead.getNext();
     }
 
     public static ListNode<Integer> mergeTwoListNew(ListNode<Integer> l1, ListNode<Integer> l2) {
@@ -50,24 +50,24 @@ public class MergeTwoLists {
             while (null != l1 || null != l2) {
                 if (null == l1) {
                     //l1遍历完毕
-                    currNode.next = l2;
+                    currNode.setNext(l2);
                     break;
                 }
                 if (null == l2) {
                     //l2遍历完毕
-                    currNode.next = l1;
+                    currNode.setNext(l1);
                     break;
                 }
-                if (l1.val <= l2.val) {
-                    currNode.next = l1;
-                    l1 = l1.next;
+                if (l1.getData() <= l2.getData()) {
+                    currNode.setNext(l1);
+                    l1 = l1.getNext();
                 } else {
-                    currNode.next = l2;
-                    l2 = l2.next;
+                    currNode.setNext(l2);
+                    l2 = l2.getNext();
                 }
-                currNode = currNode.next;
+                currNode = currNode.getNext();
             }
-            return mockHeadNode.next;
+            return mockHeadNode.getNext();
         }
     }
 }

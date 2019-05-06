@@ -42,26 +42,26 @@ public class HasCycle {
             } else {
                 nodeSeen.add(head);
             }
-            head = head.next;
+            head = head.getNext();
         }
 
         return false;
     }
 
     public static boolean hasCycleSlowFast(ListNode<Integer> head) {
-        if (head == null || head.next == null) {
+        if (head == null || head.getNext() == null) {
             return false;
         }
 
         ListNode<Integer> slow = head;
-        ListNode<Integer> fast = head.next;
+        ListNode<Integer> fast = head.getNext();
         while (slow != fast) {
-            if (fast == null || fast.next == null) {
+            if (fast == null || fast.getNext() == null) {
                 return false;
             }
 
-            slow = slow.next;
-            fast = fast.next.next;
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
         }
         return true;
     }

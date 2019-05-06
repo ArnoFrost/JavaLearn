@@ -27,9 +27,9 @@ public class ReverseSingleNode {
         //每次循环，都将当前节点指向它前面的节点，然后当前节点和前节点后移
         while (now != null) {
             //临时节点，暂存当前节点的下一节点，用于后移
-            ListNode<Integer> next = now.next;
+            ListNode<Integer> next = now.getNext();
             //将当前节点指向它前面的节点
-            now.next = prev;
+            now.setNext(prev);
             //前指针后移
             prev = now;
             //当前指针后移
@@ -42,38 +42,38 @@ public class ReverseSingleNode {
     }
 
     public static ListNode<Integer> reverseLinkedNodeNew(ListNode<Integer> head) {
-        if (head == null || head.next == null) {
+        if (head == null || head.getNext() == null) {
             System.out.println("listNode null = [" + head.printList() + "]");
             return head;
         } else {
-            ListNode<Integer> headListNode = reverseLinkedNodeNew(head.next);
-            head.next.next = head;
-            head.next = null;
+            ListNode<Integer> headListNode = reverseLinkedNodeNew(head.getNext());
+            head.getNext().setNext(head);
+            head.setNext(null);
             System.out.println("listNode = [" + head.printList() + "]");
             return headListNode;
         }
     }
 
     public ListNode<Integer> reverse2(ListNode<Integer> head, ListNode<Integer> prev) {
-        if (head.next == null) {
-            head.next = prev;
+        if (head.getNext() == null) {
+            head.setNext(prev);
             return head;
         } else {
-            ListNode re = reverse2(head.next, head);
-            head.next = prev;
+            ListNode re = reverse2(head.getNext(), head);
+            head.setNext(prev);
             return re;
         }
     }
 
     public static ListNode<Integer> reverse3(ListNode<Integer> head) {
-        if (head.next == null) {
+        if (head.getNext() == null) {
             System.out.println("listNode null = [" + head + "]");
             return head;
         }
-        ListNode<Integer> next = head.next;
-        head.next = null;
+        ListNode<Integer> next = head.getNext();
+        head.setNext(null);
         ListNode<Integer> re = reverse3(next);
-        next.next = head;
+        next.setNext(head);
         System.out.println("listNode = [" + head + "]");
         return re;
     }
@@ -83,12 +83,12 @@ public class ReverseSingleNode {
             return null;
         }
         ListNode<Integer> e = null, f = null, cur = head;
-        while ((e = cur.next) != null) {
-            cur.next = f;
+        while ((e = cur.getNext()) != null) {
+            cur.setNext(f);
             f = cur;
             cur = e;
         }
-        cur.next = f;
+        cur.setNext(f);
         return cur;
     }
 }

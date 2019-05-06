@@ -15,7 +15,7 @@ package node;
  * 输出：此列表中的结点 3 (序列化形式：[3,4,5])
  * 返回的结点值为 3 。 (测评系统对该结点序列化表述是 [3,4,5])。
  * 注意，我们返回了一个 ListNode 类型的对象 ans，这样：
- * ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, 以及 ans.next.next.next = NULL.
+ * ans.data = 3, ans.next.data = 4, ans.next.next.data = 5, 以及 ans.next.next.next = NULL.
  * 示例 2：
  * <p>
  * 输入：[1,2,3,4,5,6]
@@ -36,7 +36,7 @@ public class MiddleNode {
         int index = 0;
         while (cur != null) {
             temp[index] = cur;
-            cur = cur.next;
+            cur = cur.getNext();
             index++;
         }
         return temp[index / 2];
@@ -50,9 +50,9 @@ public class MiddleNode {
      */
     public static ListNode<Integer> middleNodeSlowFast(ListNode<Integer> head) {
         ListNode<Integer> slow = head, fast = head;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        while (fast != null && fast.getNext() != null) {
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
         }
         return slow;
     }

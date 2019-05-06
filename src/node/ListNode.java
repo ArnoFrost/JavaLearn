@@ -6,34 +6,34 @@ package node;
  * @Version 1.0
  */
 public class ListNode<T> {
-    public T val;
-    public ListNode<T> next;
+    private T data;
+    private ListNode<T> next;
 
     public ListNode() {
     }
 
-    public ListNode(T val) {
-        this.val = val;
+    public ListNode(T data) {
+        this.setData(data);
     }
 
-    public ListNode(T val, ListNode next) {
-        this.val = val;
-        this.next = next;
+    public ListNode(T data, ListNode next) {
+        this.setData(data);
+        this.setNext(next);
     }
 
     public String printList() {
-        if (next == null) {
-            return "node val = " + val + ",node next ==> null";
+        if (getNext() == null) {
+            return "node data = " + getData() + ",node next ==> null";
         }
-        return "node val = " + val + ",node next ==> " + next.printList();
+        return "node data = " + getData() + ",node next ==> " + getNext().printList();
     }
 
     @Override
     public String toString() {
-        if (next == null) {
-            return "node val = " + val + ",node next = null";
+        if (getNext() == null) {
+            return "node data = " + getData() + ",node next = null";
         }
-        return "val = " + val + ", next = " + next.val;
+        return "data = " + getData() + ", next = " + getNext().getData();
     }
 
     @Override
@@ -44,5 +44,21 @@ public class ListNode<T> {
     @Override
     public boolean equals(Object obj) {
         return super.equals(obj);
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public ListNode<T> getNext() {
+        return next;
+    }
+
+    public void setNext(ListNode<T> next) {
+        this.next = next;
     }
 }

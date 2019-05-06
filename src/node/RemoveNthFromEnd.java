@@ -20,13 +20,13 @@ public class RemoveNthFromEnd {
     public static ListNode<Integer> removeNthFromEnd(ListNode<Integer> head, int n) {
         ListNode<Integer> dummy = new ListNode<>();
         //dummy.next -> head
-        dummy.next = head;
+        dummy.setNext(head);
         int length = 0;
         //first -> head
         ListNode<Integer> first = head;
         while (first != null) {
             length++;
-            first = first.next;
+            first = first.getNext();
         }
 
         length -= n;
@@ -34,12 +34,12 @@ public class RemoveNthFromEnd {
         first = dummy;
         while (length > 0) {
             length--;
-            first = first.next;
+            first = first.getNext();
             System.out.println("first = " + first.printList());
         }
 
-        first.next = first.next.next;
+        first.setNext(first.getNext().getNext());
 
-        return dummy.next;
+        return dummy.getNext();
     }
 }
