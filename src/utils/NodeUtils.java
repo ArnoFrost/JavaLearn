@@ -1,13 +1,13 @@
-package node;
+package utils;
 
-import java.util.Random;
+import node.ListNode;
 
 /**
  * @Author: ArnoFrost
  * @Date: 2019-05-05 10:28
  * @Version 1.0
  */
-public class GenertateNode {
+public class NodeUtils {
     /**
      * 根据输入数字得到指定的单链表
      *
@@ -109,7 +109,7 @@ public class GenertateNode {
             ListNode cur = listNode;
 
             for (int i = 0; i < length; i++) {
-                cur.setNext(new ListNode<>(getRadomNumber(1, 10)));
+                cur.setNext(new ListNode<>(TestUtils.getRadomNumber(1, 10)));
                 cur = cur.getNext();
             }
         }
@@ -123,9 +123,9 @@ public class GenertateNode {
             ListNode<Integer> cur = listNode;
 
             for (int i = 0; i < length; i++) {
-                int num = getRadomNumber(1, 10);
+                int num = TestUtils.getRadomNumber(1, 10);
                 while ((Integer) cur.getData() >= num) {
-                    num = getRadomNumber(1, 10);
+                    num = TestUtils.getRadomNumber(1, 10);
                 }
                 cur.setNext(new ListNode<>(num));
                 cur = cur.getNext();
@@ -133,17 +133,5 @@ public class GenertateNode {
         }
         System.out.println("getRadomOrderNode = " + listNode.getNext().printList());
         return listNode.getNext();
-    }
-
-    /**
-     * 返回一个指定区间的随机数
-     *
-     * @param min
-     * @param max
-     * @return
-     */
-    public static int getRadomNumber(int min, int max) {
-        Random random = new Random();
-        return random.nextInt(max) % (max - min + 1) + min;
     }
 }

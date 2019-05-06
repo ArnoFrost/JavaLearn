@@ -1,9 +1,9 @@
 package test.node;
 
 import junit.framework.TestCase;
-import node.GenertateNode;
 import node.ListNode;
 import node.MiddleNode;
+import utils.NodeUtils;
 
 /**
  * @Author: ArnoFrost
@@ -12,7 +12,7 @@ import node.MiddleNode;
  */
 public class TestMiddleNode extends TestCase {
     public void testMiddle() {
-        ListNode node = GenertateNode.getNodeByNumber(false, 0, 2, 4, 5);
+        ListNode node = NodeUtils.getNodeByNumber(false, 0, 2, 4, 5);
         node = MiddleNode.middleNode(node);
         if ((Integer) node.getData() == 4) {
             System.out.println("node data == 4");
