@@ -14,6 +14,9 @@ public class TestSort extends TestCase {
     public void testInserstionSort() {
         InsertionSort.insertionSort(ArrayUtils.getSimpleArray(100000));
 
-//        InsertionSort.insertionSort(ArrayUtils.getNearlyOrderArray(100000,10));
+    }
+
+    public void testInserstionSort2() {
+        InsertionSort.insertionSort(ArrayUtils.getNearlyOrderArray(100000, 10));
     }
 }

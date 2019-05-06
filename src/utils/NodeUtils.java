@@ -6,8 +6,14 @@ import node.ListNode;
  * @Author: ArnoFrost
  * @Date: 2019-05-05 10:28
  * @Version 1.0
+ * 链表辅助生成类
  */
 public class NodeUtils {
+
+    public static ListNode<Integer> getSimpleNode(boolean withHead) {
+        return getNodeByNumber(withHead, 1, 2, 3, 4, 5, 6);
+    }
+
     /**
      * 根据输入数字得到指定的单链表
      *
@@ -36,36 +42,6 @@ public class NodeUtils {
 
     }
 
-    public static ListNode<Integer> getSimpleNode(boolean withHead) {
-        ListNode<Integer> linkListNode1 = new ListNode<>(1);
-        ListNode<Integer> linkListNode2 = new ListNode<>(2);
-        ListNode<Integer> linkListNode3 = new ListNode<>(3);
-        ListNode<Integer> linkListNode4 = new ListNode<>(4);
-        ListNode<Integer> linkListNode5 = new ListNode<>(5);
-        ListNode<Integer> linkListNode6 = new ListNode<>(6);
-
-        if (withHead) {
-            ListNode<Integer> head = new ListNode<>();
-            linkListNode1.setNext(linkListNode2);
-            linkListNode2.setNext(linkListNode3);
-            linkListNode3.setNext(linkListNode4);
-            linkListNode4.setNext(linkListNode5);
-            linkListNode5.setNext(linkListNode6);
-            System.out.println("node start = [" + head.printList() + "]");
-            return head;
-        } else {
-            linkListNode1.setNext(linkListNode2);
-            linkListNode2.setNext(linkListNode3);
-            linkListNode3.setNext(linkListNode4);
-            linkListNode4.setNext(linkListNode5);
-            linkListNode5.setNext(linkListNode6);
-        }
-
-
-        System.out.println("node start = [" + linkListNode1.printList() + "]");
-        return linkListNode1;
-
-    }
 
     public static ListNode<Integer> getSimpleCycleNode(boolean withHead) {
         ListNode<Integer> linkListNode1 = new ListNode<>(1);
@@ -98,7 +74,7 @@ public class NodeUtils {
     }
 
     /**
-     * 得到一个指定长度的随机链表
+     * 生成指定长度的随机链表
      *
      * @param length
      * @return
@@ -117,6 +93,12 @@ public class NodeUtils {
         return listNode.getNext();
     }
 
+    /**
+     * 生成有序链表
+     *
+     * @param length
+     * @return
+     */
     public static ListNode<Integer> getRadomOrderNode(int length) {
         ListNode<Integer> listNode = new ListNode<>(0);
         if (length >= 0) {

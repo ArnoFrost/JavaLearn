@@ -31,7 +31,7 @@ public class InsertionSort {
             }
             a[j + 1] = value;
         }
-        TestUtils.printCostTime();
         System.out.println("after sort a = [" + Arrays.toString(a) + "]");
+        TestUtils.printCostTime();
     }
 }
