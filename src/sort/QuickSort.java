@@ -40,6 +40,15 @@ public class QuickSort {
     private static int partition(int[] a, int leftIndex, int rightIndex) {
         int pivot = a[rightIndex];
         int partitionIndex = leftIndex;
+
+//        System.out.println("test partition begin = ");
+//        for (int i = leftIndex; i <= rightIndex; i++) {
+//            System.out.print(a[i] + ",");
+//            if (i == rightIndex) {
+//                System.out.println("test partition end = ");
+//            }
+//        }
+
         for (int i = leftIndex; i < rightIndex; i++) {
             if (a[i] < pivot) {
                 if (partitionIndex == i) {
@@ -51,7 +60,9 @@ public class QuickSort {
             }
         }
         ArrayUtils.swapArray(a, partitionIndex, rightIndex);
-//        System.out.println("partition Index=" + partitionIndex);
+        System.out.println("partition Index = " + partitionIndex);
+        System.out.println("array = " + Arrays.toString(a));
+
         return partitionIndex;
     }
 

@@ -13,7 +13,7 @@ import utils.ArrayUtils;
  * @Version 1.0
  */
 public class TestSort extends TestCase {
-    private static int ARRAY_LENGTH = 10000;
+    private static int ARRAY_LENGTH = 6;
     private static int ORDER_LENGTH = 10;
 
     /**
