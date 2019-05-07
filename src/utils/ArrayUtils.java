@@ -104,4 +104,19 @@ public class ArrayUtils {
         }
         return a;
     }
+
+    /**
+     * 交换数组
+     *
+     * @param a
+     * @param i
+     * @param j
+     * @return
+     */
+    public static int[] swapArray(int[] a, int i, int j) {
+        int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+        return a;
+    }
 }
