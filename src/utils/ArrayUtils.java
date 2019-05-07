@@ -7,8 +7,8 @@ package utils;
  * 数组辅助生成类
  */
 public class ArrayUtils {
-    public static int[] getSimpleArray(int length) {
-        return getSimpleArray(length, 1, 10);
+    public static int[] getRadomArray(int length) {
+        return getRadomArray(length, 1, 10);
     }
 
     /**
@@ -19,7 +19,7 @@ public class ArrayUtils {
      * @param max
      * @return
      */
-    public static int[] getSimpleArray(int length, int min, int max) {
+    public static int[] getRadomArray(int length, int min, int max) {
         if (length < 0) {
             return null;
         }
