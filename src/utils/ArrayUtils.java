@@ -32,19 +32,13 @@ public class ArrayUtils {
         return a;
     }
 
-    public static int[] getOrderArray(int length) {
-        return getOrderArray(length, 1, 10);
-    }
-
     /**
      * 生成有序数组
      *
      * @param length
-     * @param max
-     * @param min
      * @return
      */
-    public static int[] getOrderArray(int length, int max, int min) {
+    public static int[] getOrderArray(int length) {
         if (length < 0) {
             return null;
         }
@@ -84,6 +78,30 @@ public class ArrayUtils {
             a[TestUtils.getRadomNumber(0, length - 1)] = TestUtils.getRadomNumber(min, max);
         }
 
+        return a;
+    }
+
+    public static int[] getBadArray(int length) {
+        return getBadArray(length, 1, length);
+    }
+
+    /**
+     * 生成反序数组
+     *
+     * @param length
+     * @param min
+     * @param max
+     * @return
+     */
+    public static int[] getBadArray(int length, int min, int max) {
+        if (length < 0) {
+            return null;
+        }
+        int[] a = new int[length];
+
+        for (int i = 0; i < length; i++) {
+            a[i] = length - i;
+        }
         return a;
     }
 }
