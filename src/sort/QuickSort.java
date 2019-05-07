@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class QuickSort {
     public static void quickSort(int[] a) {
         TestUtils.printStartTime();
-        System.out.println("QuickSort.quickSort");
+        System.out.println("QuickSort.quickSortInternally");
         if (a == null || a.length == 1) {
             System.out.println("array is null or length is only 1");
             return;
