@@ -13,15 +13,17 @@ import utils.ArrayUtils;
  * @Version 1.0
  */
 public class TestSort extends TestCase {
-    private static int ARRAY_LENGTH = 6;
+    private static int ARRAY_LENGTH = 100;
     private static int ORDER_LENGTH = 10;
 
     /**
      * 随机数组 注意:避免原地排序浅拷贝带来的问题
      */
+
+//    private static int[] randomArray = new int[]{3, 4, 2, 7, 6, 9, 1, 10, 8};
     private static int[] randomArray = ArrayUtils.getRadomArray(ARRAY_LENGTH);
-    private static int[] randomArray2 = randomArray.clone();
     private static int[] randomArray3 = randomArray.clone();
+    private static int[] randomArray2 = randomArray.clone();
     private static int[] randomArray4 = randomArray.clone();
 
     /**

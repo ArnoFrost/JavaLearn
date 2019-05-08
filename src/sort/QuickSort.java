@@ -31,6 +31,8 @@ public class QuickSort {
             return;
         }
 
+        //随机基元来尽量避免退化成O(n²)级别的算法
+        ArrayUtils.swapArray(a, TestUtils.getRadomNumber(leftIndex, rightIndex), leftIndex);
         //获取分区点
         int partitionIndex = partition(a, leftIndex, rightIndex);
         quickSortInternally(a, leftIndex, partitionIndex - 1);
@@ -38,6 +40,7 @@ public class QuickSort {
     }
 
     private static int partition(int[] a, int leftIndex, int rightIndex) {
+
         int pivot = a[rightIndex];
         int partitionIndex = leftIndex;
 
@@ -60,8 +63,10 @@ public class QuickSort {
             }
         }
         ArrayUtils.swapArray(a, partitionIndex, rightIndex);
-        System.out.println("partition Index = " + partitionIndex);
-        System.out.println("array = " + Arrays.toString(a));
+
+
+//        System.out.println("partition Index = " + partitionIndex);
+//        System.out.println("array = " + Arrays.toString(a));
 
         return partitionIndex;
     }
