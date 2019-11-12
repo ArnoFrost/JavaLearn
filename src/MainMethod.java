@@ -1,5 +1,3 @@
-import stack.Calculate;
-
 /**
  * @Author: ArnoFrost
  * @Date: 2019-04-30 10:33
@@ -7,6 +5,16 @@ import stack.Calculate;
  */
 public class MainMethod {
     public static void main(String[] args) {
-        Calculate.calculate("1+2*4");
+//        Calculate.calculate("1+2*4");
+
+//        String a = "请喊“%1$s”唤醒我";
+//
+//        String b = String.format(a, "hello");
+//
+//        System.out.println(b);
+
+        System.out.print('I' + 'T');
     }
+
+
 }
