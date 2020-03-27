@@ -85,7 +85,7 @@ public class NodeUtils {
             ListNode cur = listNode;
 
             for (int i = 0; i < length; i++) {
-                cur.setNext(new ListNode<>(TestUtils.getRadomNumber(1, 10)));
+                cur.setNext(new ListNode<>(TestUtils.getRandomNumber(1, 10)));
                 cur = cur.getNext();
             }
         }
@@ -105,9 +105,9 @@ public class NodeUtils {
             ListNode<Integer> cur = listNode;
 
             for (int i = 0; i < length; i++) {
-                int num = TestUtils.getRadomNumber(1, 10);
+                int num = TestUtils.getRandomNumber(1, 10);
                 while ((Integer) cur.getData() >= num) {
-                    num = TestUtils.getRadomNumber(1, 10);
+                    num = TestUtils.getRandomNumber(1, 10);
                 }
                 cur.setNext(new ListNode<>(num));
                 cur = cur.getNext();

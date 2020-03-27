@@ -5,7 +5,7 @@ import utils.TestUtils;
 import java.util.Arrays;
 
 /**
- * @Author: ArnoFrost
+ * @Author: ArnoFrost 选择排序(可提前结束,减少交换开销优化)
  * @Date: 2019-05-06 20:30
  * @Version 1.0
  */
@@ -19,16 +19,22 @@ public class InsertionSort {
             return;
         }
         System.out.println("before sort a = [" + Arrays.toString(a) + "]");
-        for (int i = 0; i < a.length; i++) {
+        int length = a.length;
+        for (int i = 1; i < length; i++) {
+            //复制保存
             int value = a[i];
+            //改进 减少交换
             int j = i - 1;
             for (; j >= 0; j--) {
+                //后一个元素比前一个大
                 if (a[j] > value) {
+                    //触发向后赋值
                     a[j + 1] = a[j];
-                } else {
+                } else {//提前终止循环
                     break;
                 }
             }
+            //保存索引后再去赋值
             a[j + 1] = value;
         }
         System.out.println("after sort a = [" + Arrays.toString(a) + "]");

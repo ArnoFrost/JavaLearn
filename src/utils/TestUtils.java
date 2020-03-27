@@ -29,7 +29,7 @@ public class TestUtils {
      * @param max
      * @return
      */
-    public static int getRadomNumber(int min, int max) {
+    public static int getRandomNumber(int min, int max) {
         Random random = new Random();
         return random.nextInt(max) % (max - min + 1) + min;
     }

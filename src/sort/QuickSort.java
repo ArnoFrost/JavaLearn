@@ -32,7 +32,7 @@ public class QuickSort {
         }
 
         //随机基元来尽量避免退化成O(n²)级别的算法
-        ArrayUtils.swapArray(a, TestUtils.getRadomNumber(leftIndex, rightIndex), leftIndex);
+        ArrayUtils.swapArray(a, TestUtils.getRandomNumber(leftIndex, rightIndex), leftIndex);
         //获取分区点
         int partitionIndex = partition(a, leftIndex, rightIndex);
         quickSortInternally(a, leftIndex, partitionIndex - 1);

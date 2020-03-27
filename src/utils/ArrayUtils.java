@@ -26,7 +26,7 @@ public class ArrayUtils {
         int[] a = new int[length];
 
         for (int i = 0; i < length; i++) {
-            a[i] = TestUtils.getRadomNumber(min, max);
+            a[i] = TestUtils.getRandomNumber(min, max);
         }
 
         return a;
@@ -75,7 +75,7 @@ public class ArrayUtils {
         }
 
         for (int i = 0; i < n; i++) {
-            a[TestUtils.getRadomNumber(0, length - 1)] = TestUtils.getRadomNumber(min, max);
+            a[TestUtils.getRandomNumber(0, length - 1)] = TestUtils.getRandomNumber(min, max);
         }
 
         return a;
