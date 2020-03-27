@@ -1,4 +1,8 @@
-package other;
+package other;/*
+This is the tester class for Dijkstra's algorithm
+by Weston Jackson
+wjj2106
+*/
 
 import javax.swing.*;
 import java.awt.*;
@@ -109,12 +113,14 @@ public class DijkstraTester2 {
                 else {
                     distance.setText("00.00 Miles");
                     ArrayList<Vertex> path = null;
+                    System.out.println("number = " + path.size());
                     map.addPath(path);
                     map.repaint();
+                    map.list();
+
                 }
             }
         }
-
     }
 
 }
