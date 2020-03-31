@@ -13,7 +13,7 @@ public class SortTest extends TestCase {
     /**
      * 数组长度
      */
-    private static int ARRAY_LENGTH = 10000;
+    private static int ARRAY_LENGTH = 50000;
     /**
      * 有序数字个数
      */
@@ -76,9 +76,9 @@ public class SortTest extends TestCase {
     }
 
     public static void testMergeSort() {
-        MergeSort.mergeSort(randomArray.clone());
+//        MergeSort.mergeSort(randomArray.clone());
         MergeSort.mergeSort(nearlyOrderArray.clone());
-        MergeSort.mergeSort(badOrderArray.clone());
+//        MergeSort.mergeSort(badOrderArray.clone());
     }
 
     public static void testQuickSort() {

@@ -11,6 +11,11 @@ import java.util.Arrays;
  */
 public class MergeSort {
 
+    /**
+     * 自顶向下归并
+     *
+     * @param a
+     */
     public static void mergeSort(int[] a) {
         TestUtils.printStartTime();
         System.out.println("MergeSort.mergeSort");
@@ -25,7 +30,7 @@ public class MergeSort {
     }
 
     /**
-     * 递归调用函数
+     * 递归调用函数 对arr[left..right) 前闭后开区间
      *
      * @param a
      * @param left
@@ -43,8 +48,12 @@ public class MergeSort {
         mergeSortInternally(a, left, middle);
         mergeSortInternally(a, middle + 1, right);
 
-        // 将A[left...middle]和A[middle+1...right]合并为A[left...right]
-        merge(a, left, middle, right);
+        //优化改进,看是否需要继续合并,优化近乎有序情况 左边已经都小于右边
+        if (a[middle] > a[middle + 1]) {
+            // 将A[left...middle]和A[middle+1...right]合并为A[left...right]
+            merge(a, left, middle, right);
+        }
+
     }
 
     /**
@@ -95,6 +104,20 @@ public class MergeSort {
         for (lIndex = 0; lIndex <= right - left; ++lIndex) {
             //拷贝数组有left的偏移
             a[left + lIndex] = tmp[lIndex];
+        }
+    }
+
+    /**
+     * 自底向上归并 bottomUp 待整理
+     *
+     * @param a
+     */
+    public static void mergeSortBU(int[] a) {
+        int length = a.length;
+        for (int sz = 1; sz <= length; sz += sz) {
+            for (int i = 0; i + sz < length; i += sz + sz) {
+                merge(a, i, i + sz - 1, Math.min(i + sz + sz - 1, length - 1));
+            }
         }
     }
 
