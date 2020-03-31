@@ -36,15 +36,16 @@ public class SortTest extends TestCase {
     private static int[] badOrderArray = ArrayUtils.getBadArray(ARRAY_LENGTH);
 
     public static void main(String[] args) {
+        //测试冒泡排序
 //        testBubbleSort();
         //测试选择排序
-        testSelectionSort();
+//        testSelectionSort();
         //测试插入排序
-        testInsertionSort();
-
-//
-//
-//        testMergeSort();
+//        testInsertionSort();
+        //测试希尔排序
+//        testShellSort();
+        //测试归并排序
+        testMergeSort();
 //
 //        testQuickSort();
 
@@ -61,6 +62,11 @@ public class SortTest extends TestCase {
         BubbleSort.bubbleSort(randomArray.clone());
         BubbleSort.bubbleSort(nearlyOrderArray.clone());
         BubbleSort.bubbleSort(badOrderArray.clone());
+        //测试优化的冒泡算法
+        BubbleSort.bubbleSortOpt(randomArray.clone());
+        BubbleSort.bubbleSortOpt(nearlyOrderArray.clone());
+        BubbleSort.bubbleSortOpt(badOrderArray.clone());
+
     }
 
     public static void testInsertionSort() {
@@ -79,6 +85,12 @@ public class SortTest extends TestCase {
         QuickSort.quickSort(randomArray.clone());
         QuickSort.quickSort(nearlyOrderArray.clone());
         QuickSort.quickSort(badOrderArray.clone());
+    }
+
+    public static void testShellSort() {
+        ShellSort.shellSort(randomArray.clone());
+        ShellSort.shellSort(nearlyOrderArray.clone());
+        ShellSort.shellSort(badOrderArray.clone());
     }
 }
 

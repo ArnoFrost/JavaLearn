@@ -10,6 +10,7 @@ import java.util.Arrays;
  * @Version 1.0
  */
 public class MergeSort {
+
     public static void mergeSort(int[] a) {
         TestUtils.printStartTime();
         System.out.println("MergeSort.mergeSort");
@@ -27,59 +28,62 @@ public class MergeSort {
      * 递归调用函数
      *
      * @param a
-     * @param p
-     * @param r
+     * @param left
+     * @param right
      */
-    private static void mergeSortInternally(int[] a, int p, int r) {
+    private static void mergeSortInternally(int[] a, int left, int right) {
         // 递归终止条件
-        if (p >= r) {
+        if (left >= right) {
             return;
         }
 
-        // 取p到r之间的中间位置q,防止（p+r）的和超过int类型最大值
-        int q = p + (r - p) / 2;
+        // 取left到right之间的中间位置middle,防止（left+right）的和超过int类型最大值
+        int middle = left + (right - left) / 2;
         // 分治递归
-        mergeSortInternally(a, p, q);
-        mergeSortInternally(a, q + 1, r);
+        mergeSortInternally(a, left, middle);
+        mergeSortInternally(a, middle + 1, right);
 
-        // 将A[p...q]和A[q+1...r]合并为A[p...r]
-        merge(a, p, q, r);
+        // 将A[left...middle]和A[middle+1...right]合并为A[left...right]
+        merge(a, left, middle, right);
     }
 
     /**
      * 合并数组
      *
      * @param a
-     * @param p
-     * @param q
-     * @param r
+     * @param left   左边界
+     * @param middle 中间值
+     * @param right  右边界
      */
-    private static void merge(int[] a, int p, int q, int r) {
+    private static void merge(int[] a, int left, int middle, int right) {
         /**
-         * 初始化变量i, j, k
+         * 初始化变量lIndex,rIndex,middle
          */
-        int pIndex = p;
-        int rIndex = q + 1;
+        int lIndex = left;
+        int rIndex = middle + 1;
         int mergeIndex = 0;
         /**
-         * 申请一个大小跟a[p...r]一样的临时数组
+         * 申请一个大小跟a[left...right]一样的临时数组
          */
-        int[] tmp = new int[r - p + 1];
-        while (pIndex <= q && rIndex <= r) {
-            if (a[pIndex] <= a[rIndex]) {
-                // i++等于i:=i+1
-                tmp[mergeIndex++] = a[pIndex++];
+        int[] tmp = new int[right - left + 1];
+        while (lIndex <= middle && rIndex <= right) {
+            if (a[lIndex] <= a[rIndex]) {
+                tmp[mergeIndex++] = a[lIndex++];
             } else {
                 tmp[mergeIndex++] = a[rIndex++];
             }
         }
 
         // 判断哪个子数组中有剩余的数据
-        int start = pIndex;
-        int end = q;
-        if (rIndex <= r) {
+        int start, end;
+        //右边有剩余 rIndex .. right
+        if (rIndex <= right) {
             start = rIndex;
-            end = r;
+            end = right;
+        } else {
+            //左边有剩余 lIndex .. middle
+            start = lIndex;
+            end = middle;
         }
 
         // 将剩余的数据拷贝到临时数组tmp
@@ -87,9 +91,10 @@ public class MergeSort {
             tmp[mergeIndex++] = a[start++];
         }
 
-        // 将tmp中的数组拷贝回a[p...r]
-        for (pIndex = 0; pIndex <= r - p; ++pIndex) {
-            a[p + pIndex] = tmp[pIndex];
+        // 将tmp中的数组拷贝回a[left...right]
+        for (lIndex = 0; lIndex <= right - left; ++lIndex) {
+            //拷贝数组有left的偏移
+            a[left + lIndex] = tmp[lIndex];
         }
     }
 
