@@ -13,7 +13,7 @@ public class SortTest extends TestCase {
     /**
      * 数组长度
      */
-    private static int ARRAY_LENGTH = 50000;
+    private static int ARRAY_LENGTH = 10;
     /**
      * 有序数字个数
      */
@@ -45,9 +45,9 @@ public class SortTest extends TestCase {
         //测试希尔排序
 //        testShellSort();
         //测试归并排序
-        testMergeSort();
-//
-//        testQuickSort();
+//        testMergeSort();
+        //测试快速快速排序
+        testQuickSort();
 
     }
 
