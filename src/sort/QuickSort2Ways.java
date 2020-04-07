@@ -10,10 +10,10 @@ import java.util.Arrays;
  * @Date: 2019-05-07 14:23
  * @Version 1.0
  */
-public class QuickSort {
+public class QuickSort2Ways {
     public static void quickSort(int[] a) {
         TestUtils.printStartTime();
-        System.out.println("QuickSort.quickSortInternally");
+        System.out.println("QuickSort2Ways.quickSortInternally");
         if (a == null || a.length == 1) {
             System.out.println("array is null or length is only 1");
             return;
@@ -48,37 +48,41 @@ public class QuickSort {
         quickSortInternally(a, partitionIndex + 1, rIndex);
     }
 
+    /**
+     * 双路快排实现
+     *
+     * @param arr
+     * @param lIndex
+     * @param rIndex
+     * @return
+     */
     private static int partition(int[] arr, int lIndex, int rIndex) {
         //将基元值设置为一个数值 比如第一个
         int pivot = arr[lIndex];
-        //定义规则 让arr[lIndex+1..partitionIndex] < pivot
-        // arr[partitionIndex+1..i) > pivot 前闭后开注意
 
-        //※※※初始化的时候 第一个数组区间为空 因为 partitionIndex = lIndex 相当于[lIndex + 1.. lIndex] 区间不存在
-        int partitionIndex = lIndex;
+        //arr[lIndex..i) <=v
+        //arr(j..rIndex) >=v
 
-        //※※※且由于i = lIndex + 1 [partitionIndex+1 ..i) ≈ [lIndex + 1 .. lIndex + 1) 区间也为空
-        for (int i = lIndex + 1; i <= rIndex; i++) {
-            //∵要始终满足arr[partitionIndex+1 ..i] > pivot
-            //∴如果当前考察元素 大于 基准pivot 不需要做事情
-//            if (arr[i] > pivot) {
-//
-//            }
-
-            //∵不满足定义所以要放置到之前的arr[lIndex+1..partitionIndex]区间中
-            //将小于基准的元素 交换并继续遍历考察满足的情况
-            if (arr[i] < pivot) {
-                ArrayUtils.swapArray(arr, ++partitionIndex, i);
+        //标识出两个索引 i, j
+        int i = lIndex + 1;
+        int j = rIndex;
+        while (true) {
+            while (i <= rIndex && arr[i] < pivot) {
+                i++;
             }
+            while (j >= lIndex + 1 && arr[j] > pivot) {
+                j--;
+            }
+            if (i > j) {
+                break;
+            }
+            ArrayUtils.swapArray(arr, i++, j--);
         }
+        ArrayUtils.swapArray(arr, lIndex, j);
 
-        //最后将基元的位置放入应该放入的位置
-        //也就是partitionIndex,此时 数据满足 [lIndex..partition] < pivot > [partition+1 ..rIndex]
-        //至此结束此次partition操作
-        ArrayUtils.swapArray(arr, partitionIndex, lIndex);
-
-        return partitionIndex;
+        return j;
     }
+
 
     private static void insertionSort(int[] a, int lIndex, int rIndex) {
         if (a == null || a.length == 1) {

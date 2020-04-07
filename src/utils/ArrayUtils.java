@@ -106,6 +106,26 @@ public class ArrayUtils {
     }
 
     /**
+     * 生成大量重复元素的数组
+     *
+     * @param arrayLength
+     * @param min
+     * @param max
+     * @return
+     */
+    public static int[] getRepeatArray(int arrayLength, int min, int max) {
+        if (arrayLength < 0) {
+            return null;
+        }
+        int[] a = new int[arrayLength];
+
+        for (int i = 0; i < arrayLength; i++) {
+            a[i] = TestUtils.getRandomNumber(min, max);
+        }
+        return a;
+    }
+
+    /**
      * 交换数组
      *
      * @param a

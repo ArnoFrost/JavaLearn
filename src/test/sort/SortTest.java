@@ -13,7 +13,7 @@ public class SortTest extends TestCase {
     /**
      * 数组长度
      */
-    private static int ARRAY_LENGTH = 10;
+    private static int ARRAY_LENGTH = 30000;
     /**
      * 有序数字个数
      */
@@ -29,6 +29,10 @@ public class SortTest extends TestCase {
      * 近乎有序数组
      */
     private static int[] nearlyOrderArray = ArrayUtils.getNearlyOrderArray(ARRAY_LENGTH, ORDER_LENGTH);
+    /**
+     * 大量重复数据的数组
+     */
+    private static int[] repeatArray = ArrayUtils.getRepeatArray(ARRAY_LENGTH, 0, 10);
 
     /**
      * 最差情况数组
@@ -45,7 +49,7 @@ public class SortTest extends TestCase {
         //测试希尔排序
 //        testShellSort();
         //测试归并排序
-//        testMergeSort();
+        testMergeSort();
         //测试快速快速排序
         testQuickSort();
 
@@ -77,14 +81,22 @@ public class SortTest extends TestCase {
 
     public static void testMergeSort() {
 //        MergeSort.mergeSort(randomArray.clone());
-        MergeSort.mergeSort(nearlyOrderArray.clone());
+//        MergeSort.mergeSort(nearlyOrderArray.clone());
 //        MergeSort.mergeSort(badOrderArray.clone());
+//        MergeSort.mergeSort(repeatArray.clone());
     }
 
     public static void testQuickSort() {
-        QuickSort.quickSort(randomArray.clone());
-        QuickSort.quickSort(nearlyOrderArray.clone());
-        QuickSort.quickSort(badOrderArray.clone());
+//        QuickSort.quickSort(randomArray.clone());
+//        QuickSort.quickSort(nearlyOrderArray.clone());
+//        QuickSort.quickSort(badOrderArray.clone());
+//        QuickSort.quickSort(repeatArray.clone());
+//
+//        QuickSort2Ways.quickSort(repeatArray.clone());
+//        QuickSort3Ways.quickSort(repeatArray.clone());
+
+        QuickSort2Ways.quickSort(badOrderArray.clone());
+        QuickSort3Ways.quickSort(badOrderArray.clone());
     }
 
     public static void testShellSort() {
