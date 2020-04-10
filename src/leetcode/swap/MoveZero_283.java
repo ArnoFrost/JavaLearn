@@ -1,4 +1,4 @@
-package leetcode.delete;
+package leetcode.swap;
 
 /**
  * @Author: ArnoFrost

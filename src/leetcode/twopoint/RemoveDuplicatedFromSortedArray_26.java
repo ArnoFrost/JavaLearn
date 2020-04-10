@@ -1,4 +1,4 @@
-package leetcode.delete;
+package leetcode.twopoint;
 
 /**
  * @Author: ArnoFrost
