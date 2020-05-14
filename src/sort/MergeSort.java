@@ -45,7 +45,7 @@ public class MergeSort {
         // 取left到right之间的中间位置middle,防止（left+right）的和超过int类型最大值
         int middle = left + (right - left) / 2;
         // 分治递归
-        mergeSortInternally(a, left, middle);
+        mergeSortInternally(a, 0, middle);
         mergeSortInternally(a, middle + 1, right);
 
         //优化改进,看是否需要继续合并,优化近乎有序情况 左边已经都小于右边

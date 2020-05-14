@@ -1,5 +1,7 @@
 package tree;
 
+import java.util.Stack;
+
 /**
  * @Author: ArnoFrost
  * @Date: 2020/4/1 14:11
@@ -20,6 +22,13 @@ public class BST<Key extends Comparable<Key>, Value> {
             this.key = key;
             this.value = value;
             left = right = null;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "value=" + value +
+                    '}';
         }
     }
 
@@ -117,14 +126,127 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    public void preOrderRecursion() {
+        Stack<Node> treeNodeStack = new Stack<Node>();
+        // 用来暂存节点的栈
+        // 新建一个游标节点为根节点
+        Node node = root;
+        // 当遍历到最后一个节点的时候，无论它的左右子树都为空，并且栈也为空
+        // 所以，只要不同时满足这两点，都需要进入循环
+        while (node != null || !treeNodeStack.isEmpty()) {
+            // 若当前考查节点非空，则输出该节点的值
+            // 由考查顺序得知，需要一直往左走
+            while (node != null) {
+                System.out.print(node.value + " ");
+                // 为了之后能找到该节点的右子树，暂存该节点
+                treeNodeStack.push(node);
+                node = node.left;
+            }
+            // 一直到左子树为空，则开始考虑右子树
+            // 如果栈已空，就不需要再考虑
+            // 弹出栈顶元素，将游标等于该节点的右子树
+            if (!treeNodeStack.isEmpty()) {
+                node = treeNodeStack.pop();
+                node = node.right;
+            }
+        }
+    }
+
+    public void midOrderRecursion() {
+        Stack<Node> treeNodeStack = new Stack<Node>();
+        // 用来暂存节点的栈
+        // 新建一个游标节点为根节点
+        Node node = root;
+        // 当遍历到最后一个节点的时候，无论它的左右子树都为空，并且栈也为空
+        // 所以，只要不同时满足这两点，都需要进入循环
+        while (node != null || !treeNodeStack.isEmpty()) {
+            // 若当前考查节点非空，则输出该节点的值
+            // 由考查顺序得知，需要一直往左走
+            while (node != null) {
+                // 为了之后能找到该节点的右子树，暂存该节点
+                treeNodeStack.push(node);
+                node = node.left;
+            }
+            // 一直到左子树为空，则开始考虑右子树
+            // 如果栈已空，就不需要再考虑
+            // 弹出栈顶元素，将游标等于该节点的右子树
+            if (!treeNodeStack.isEmpty()) {
+                node = treeNodeStack.pop();
+                //此时先获取当前
+                System.out.print(node.value + " ");
+                node = node.right;
+            }
+        }
+    }
+
+    public void preOrder(Node node) {
+        if (node == null) {
+//            System.out.println("node is null");
+            return;
+        }
+
+        System.out.print(node.value + " ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    public void midOrder(Node node) {
+        if (node == null) {
+//            System.out.println("node is null");
+            return;
+        }
+
+        midOrder(node.left);
+        System.out.print(node.value + " ");
+        midOrder(node.right);
+    }
+
+    public void postOrder(Node node) {
+        if (node == null) {
+//            System.out.println("node is null");
+            return;
+        }
+
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.print(node.value + " ");
+    }
+
+    // 非递归后序遍历
+    public void postorderTraversal() {
+        Stack<Node> treeNodeStack = new Stack<Node>();
+        Node node = root;
+        Node lastVisit = root;
+        while (node != null || !treeNodeStack.isEmpty()) {
+            while (node != null) {
+                treeNodeStack.push(node);
+                node = node.left;
+            }
+            //查看当前栈顶元素
+            node = treeNodeStack.peek();
+            //如果其右子树也为空，或者右子树已经访问
+            //则可以直接输出当前节点的值
+            if (node.right == null || node.right == lastVisit) {
+                System.out.print(node.value + " ");
+                treeNodeStack.pop();
+                lastVisit = node;
+                node = null;
+            } else {
+                //否则，继续遍历右子树
+                node = node.right;
+            }
+        }
+    }
+
     // 测试二分搜索树
     public static void main(String[] args) {
 
-        int N = 1000000;
+//        int N = 1000000;
+        int N = 9;
 
         // 创建一个数组，包含[0...N)的所有元素
         Integer[] arr = new Integer[N];
-        for (int i = 0; i < N; i++) {
+        for (int i = 1; i < N; i++) {
             arr[i] = new Integer(i);
         }
 
@@ -152,14 +274,28 @@ public class BST<Key extends Comparable<Key>, Value> {
         // 对[0...2*N)的所有整型测试在二分搜索树中查找
         // 若i在[0...N)之间，则能查找到整型所对应的字符串
         // 若i在[N...2*N)之间，则结果为null
-        for (int i = 0; i < 2 * N; i++) {
-            String res = bst.search(new Integer(i));
-            if (i < N) {
-                assert res.equals(Integer.toString(i));
-            } else {
-                assert res == null;
-            }
-        }
+//        for (int i = 0; i < 2 * N; i++) {
+//            String res = bst.search(new Integer(i));
+//            if (i < N) {
+//                assert res.equals(Integer.toString(i));
+//            } else {
+//                assert res == null;
+//            }
+//        }
+
+//        bst.preOrder(bst.root);
+//        System.out.println();
+//        bst.preOrderRecursion();
+
+//        bst.midOrder(bst.root);
+//        System.out.println();
+//        bst.midOrderRecursion();
+
+        bst.postOrder(bst.root);
+        System.out.println();
+        bst.postorderTraversal();
+//        bst.midOrder(bst.root);
+//        bst.lastOrder(bst.root);
     }
 }
 
