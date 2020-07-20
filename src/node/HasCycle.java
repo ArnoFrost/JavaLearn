@@ -34,6 +34,12 @@ import java.util.Set;
  */
 public class HasCycle {
 
+    /**
+     * 哈希表方法
+     *
+     * @param head
+     * @return
+     */
     public static boolean hasCycle(ListNode<Integer> head) {
         Set<ListNode<Integer>> nodeSeen = new HashSet<>();
         while (head != null) {
@@ -48,6 +54,30 @@ public class HasCycle {
         return false;
     }
 
+    public static boolean has(ListNode<Integer> head) {
+        if (head == null || head.getNext() == null) {
+            return false;
+        }
+        ListNode<Integer> slow = head;
+        ListNode<Integer> fast = head.getNext();
+
+        while (slow != fast) {
+            if (fast == null || fast.getNext() == null) {
+                return false;
+            }
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
+        }
+
+        return true;
+    }
+
+    /**
+     * 快慢指针方式
+     *
+     * @param head
+     * @return
+     */
     public static boolean hasCycleSlowFast(ListNode<Integer> head) {
         if (head == null || head.getNext() == null) {
             return false;
@@ -56,13 +86,15 @@ public class HasCycle {
         ListNode<Integer> slow = head;
         ListNode<Integer> fast = head.getNext();
         while (slow != fast) {
+            //如果慢指针先到达终点则不存在环
             if (fast == null || fast.getNext() == null) {
                 return false;
             }
-
+            //继续下次
             slow = slow.getNext();
             fast = fast.getNext().getNext();
         }
         return true;
     }
+
 }

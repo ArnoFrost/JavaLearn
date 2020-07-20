@@ -13,6 +13,8 @@ package node;
  * 输出: 5->4->3->2->1->NULL
  */
 public class ReverseSingleNode {
+
+
     /**
      * 单链表翻转
      */
@@ -44,7 +46,7 @@ public class ReverseSingleNode {
     public static ListNode<Integer> reverseLinkedNodeNew(ListNode<Integer> head) {
         if (head == null || head.getNext() == null) {
             System.out.println("listNode null = [" + head.printList() + "]");
-            return head;
+            return null;
         } else {
             ListNode<Integer> headListNode = reverseLinkedNodeNew(head.getNext());
             head.getNext().setNext(head);

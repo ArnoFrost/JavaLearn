@@ -18,8 +18,8 @@ public class OddTest {
     private volatile static boolean flag = true;
 
     public static void main(String[] args) {
-        doByReEntrant();
-//        doBySync();
+//        doByReEntrant();
+        doBySync();
 //        doByAtomicInteger();
 //        doByExecutor();
     }
@@ -68,7 +68,7 @@ public class OddTest {
     }
 
     private static int countSync = 0;
-    private static Object lock = new Object();
+    private static final Object lock = new Object();
 
     private static void doBySync() {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -115,8 +115,8 @@ public class OddTest {
         executorService.shutdown();
     }
 
-    private static AtomicInteger atomicCount = new AtomicInteger(0);
-    private static AtomicBoolean atomicBoolean = new AtomicBoolean(true);
+    private static final AtomicInteger atomicCount = new AtomicInteger(0);
+    private static final AtomicBoolean atomicBoolean = new AtomicBoolean(true);
 
     private static void doByAtomicInteger() {
         ExecutorService executorService = Executors.newCachedThreadPool();
