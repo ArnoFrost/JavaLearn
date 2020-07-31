@@ -20,16 +20,26 @@ public class SelectionSort {
         }
         System.out.println("before sort a = [" + Arrays.toString(a) + "]");
         int length = a.length;
-        for (int i = 0; i < length; i++) {
+        int minIndex, temp;
+        for (int i = 0; i < length - 1; i++) {
+            minIndex = i;
             for (int j = i + 1; j < length; j++) {
-                if (a[j] < a[i]) {
-                    int temp = a[j];
-                    a[j] = a[i];
-                    a[i] = temp;
+                if (a[j] < a[minIndex]) {
+                    minIndex = j;
                 }
             }
+            if (i != minIndex) {
+                temp = a[i];
+                a[i] = a[minIndex];
+                a[minIndex] = temp;
+            }
         }
+
         System.out.println("after sort a = [" + Arrays.toString(a) + "]");
         TestUtils.printCostTime();
+    }
+
+    public static void selectTion(int[] a) {
+
     }
 }

@@ -9,7 +9,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * 非公平 自旋锁 简单实现
  */
 public class SpinLock {
-    private AtomicReference<Thread> sign = new AtomicReference<>();
+
+    private final AtomicReference<Thread> sign = new AtomicReference<>();
 
     public void lock() {
         Thread current = Thread.currentThread();

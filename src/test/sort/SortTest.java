@@ -41,35 +41,35 @@ public class SortTest extends TestCase {
 
     public static void main(String[] args) {
         //测试冒泡排序
-//        testBubbleSort();
+        testBubbleSort();
         //测试选择排序
-//        testSelectionSort();
+        testSelectionSort();
         //测试插入排序
 //        testInsertionSort();
         //测试希尔排序
 //        testShellSort();
         //测试归并排序
-        testMergeSort();
+//        testMergeSort();
         //测试快速快速排序
-        testQuickSort();
+//        testQuickSort();
 
     }
 
 
     public static void testSelectionSort() {
-        SelectionSort.selectionSort(randomArray.clone());
+//        SelectionSort.selectionSort(randomArray.clone());
         SelectionSort.selectionSort(nearlyOrderArray.clone());
-        SelectionSort.selectionSort(badOrderArray.clone());
+//        SelectionSort.selectionSort(badOrderArray.clone());
     }
 
     public static void testBubbleSort() {
-        BubbleSort.bubbleSort(randomArray.clone());
+//        BubbleSort.bubbleSort(randomArray.clone());
         BubbleSort.bubbleSort(nearlyOrderArray.clone());
-        BubbleSort.bubbleSort(badOrderArray.clone());
+//        BubbleSort.bubbleSort(badOrderArray.clone());
         //测试优化的冒泡算法
-        BubbleSort.bubbleSortOpt(randomArray.clone());
-        BubbleSort.bubbleSortOpt(nearlyOrderArray.clone());
-        BubbleSort.bubbleSortOpt(badOrderArray.clone());
+//        BubbleSort.bubbleSortOpt(randomArray.clone());
+//        BubbleSort.bubbleSortOpt(nearlyOrderArray.clone());
+//        BubbleSort.bubbleSortOpt(badOrderArray.clone());
 
     }
 

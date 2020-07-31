@@ -96,5 +96,4 @@ public class HasCycle {
         }
         return true;
     }
-
 }

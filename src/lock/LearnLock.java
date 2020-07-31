@@ -7,8 +7,8 @@ package lock;
  */
 public class LearnLock {
     public static void main(String[] args) {
-//        testSyncLock();
-        testSpinLock();
+        testSyncLock();
+//        testSpinLock();
     }
 
     private static void testSpinLock() {
@@ -67,7 +67,6 @@ public class LearnLock {
     private static void testSyncLock() {
         final Object a = new Object();
         final Object b = new Object();
-
         Thread threadA = new Thread(new Runnable() {
             @Override
             public void run() {
