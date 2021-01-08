@@ -5,7 +5,7 @@ import utils.ArrayUtils;
 import java.util.Arrays;
 
 public class TestSort {
-    private static int[] randomArray = ArrayUtils.getRadomArray(100000);
+    private static int[] randomArray = ArrayUtils.getRandomArray(100000);
 
     public static void main(String[] args) {
 //        System.out.println(Arrays.toString(randomArray));

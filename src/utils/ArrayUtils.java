@@ -7,8 +7,8 @@ package utils;
  * 数组辅助生成类
  */
 public class ArrayUtils {
-    public static int[] getRadomArray(int length) {
-        return getRadomArray(length, 1, 10);
+    public static int[] getRandomArray(int length) {
+        return getRandomArray(length, 1, 10);
     }
 
     /**
@@ -19,7 +19,7 @@ public class ArrayUtils {
      * @param max
      * @return
      */
-    public static int[] getRadomArray(int length, int min, int max) {
+    public static int[] getRandomArray(int length, int min, int max) {
         if (length < 0) {
             return null;
         }
@@ -138,5 +138,20 @@ public class ArrayUtils {
         a[i] = a[j];
         a[j] = tmp;
         return a;
+    }
+
+    public static void printArray(int[] array) {
+        if (array == null) {
+            return;
+        }
+        int length = array.length;
+        StringBuilder builder = new StringBuilder();
+        builder.append("[");
+        for (int i = 0; i < length; i++) {
+            builder.append(i + ",");
+        }
+        builder.deleteCharAt(builder.length() - 1);
+        builder.append("]");
+        System.out.print(builder.toString());
     }
 }

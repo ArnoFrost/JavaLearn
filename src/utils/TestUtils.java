@@ -1,6 +1,7 @@
 package utils;
 
 import java.util.Random;
+import java.util.regex.Pattern;
 
 /**
  * @Author: ArnoFrost
@@ -11,6 +12,9 @@ import java.util.Random;
 public class TestUtils {
 
     private static long time = 0;
+
+    public TestUtils() {
+    }
 
     public static void printStartTime() {
         TestUtils.time = System.currentTimeMillis();
@@ -33,4 +37,12 @@ public class TestUtils {
         Random random = new Random();
         return random.nextInt(max) % (max - min + 1) + min;
     }
+
+    // 判断一个字符串是否为数字型
+    public static boolean isInteger(String str) {
+        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
+        String json = "";
+        return pattern.matcher(str).matches();
+    }
+
 }

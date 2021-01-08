@@ -1,7 +1,6 @@
 package design.single;
 
 import java.util.Vector;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: ArnoFrost
@@ -10,21 +9,25 @@ import java.util.concurrent.TimeUnit;
  */
 public class Test {
     public static void main(String[] args) throws InterruptedException {
-        Vector<Integer> vector = new Vector<>();
-        // 先存放1000个值让iterator有值可以遍历
-        for (int i = 0; i < 1000; i++) {
-            vector.add(i);
-        }
+        Singleton.getInstance();
+//        StaticInner.getInstance();
+//        Vector<Integer> vector = new Vector<>();
+//        // 先存放1000个值让iterator有值可以遍历
+//        for (int i = 0; i < 1000; i++) {
+//            vector.add(i);
+//        }
+//
+//        Thread iteratorThread = new Thread(new IteratorRunnable(vector));
+//        iteratorThread.start();
+//
+//        // 主线程休眠5秒，让iteratorThread能够充分跑起来。这段时间是不会有问题的。
+//        TimeUnit.SECONDS.sleep(5);
+//
+//        // 该线程启动之后，会结构化修改Vector，然后就会抛出ConcurrentModificationException异常
+//        Thread modifyVectorThread = new Thread(new ModifyVectorRunnable(vector));
+//        modifyVectorThread.start();
 
-        Thread iteratorThread = new Thread(new IteratorRunnable(vector));
-        iteratorThread.start();
 
-        // 主线程休眠5秒，让iteratorThread能够充分跑起来。这段时间是不会有问题的。
-        TimeUnit.SECONDS.sleep(5);
-
-        // 该线程启动之后，会结构化修改Vector，然后就会抛出ConcurrentModificationException异常
-        Thread modifyVectorThread = new Thread(new ModifyVectorRunnable(vector));
-        modifyVectorThread.start();
     }
 
     /**

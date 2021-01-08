@@ -7,4 +7,12 @@ package design.single;
  */
 public enum Enum {
     INSTANCE;
+
+    private void init() {
+        System.out.println();
+    }
+
+    private void setData() {
+        System.out.println("Enum.setData");
+    }
 }

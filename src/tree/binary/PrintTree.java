@@ -1,8 +1,6 @@
 package tree.binary;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @Author: ArnoFrost
@@ -16,7 +14,9 @@ public class PrintTree {
         LinkedList<TreeNode> treeNodes = createBinTree();
         //非递归前序遍历
         System.out.println(preOder(treeNodes.get(0)));
-        ;
+        //非递归后序遍历
+        System.out.println(postorderTraversal2(treeNodes.get(0)));
+        System.out.println(postOrder(treeNodes.get(0)));
     }
 
     /**
@@ -65,4 +65,53 @@ public class PrintTree {
         return nodeList;
 
     }
+
+    public static List<Integer> postOrder(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        Stack<TreeNode> preStack = new Stack<>();
+        Stack<TreeNode> outStack = new Stack<>();
+
+        preStack.push(root);
+        while (!preStack.isEmpty()) {
+            TreeNode node = preStack.pop();
+            outStack.push(node);
+
+            if (node.left != null) {
+                preStack.push(node.left);
+            }
+            if (node.right != null) {
+                preStack.push(node.right);
+            }
+        }
+
+        List<Integer> outList = new ArrayList<>();
+        while (!outStack.isEmpty()) {
+            outList.add(outStack.pop().getVal());
+        }
+
+        return outList;
+    }
+
+    public static List<Integer> postorderTraversal2(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        Deque<TreeNode> stack = new LinkedList<>();
+        stack.push(root);
+        List<Integer> ret = new ArrayList<>();
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if (node != null) {
+                ret.add(node.getVal());
+                stack.push(node.left);
+                stack.push(node.right);
+            }
+        }
+
+        Collections.reverse(ret);
+        return ret;
+    }
+
 }

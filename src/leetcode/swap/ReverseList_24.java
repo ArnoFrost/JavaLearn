@@ -40,10 +40,30 @@ public class ReverseList_24 {
 
         printNode(reverseList2(head));
     }
-/**
- * 题解信息
- * https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/solution/dong-hua-yan-shi-duo-chong-jie-fa-206-fan-zhuan-li/
- */
+
+    /**
+     * 题解信息
+     * https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/solution/dong-hua-yan-shi-duo-chong-jie-fa-206-fan-zhuan-li/
+     */
+
+    public static ListNode myReverse(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode pre = null;
+        ListNode cur = head;
+        ListNode next = null;
+
+        while (cur != null) {
+            next = cur.next;
+            cur.next = pre;
+            pre = cur;
+
+            cur = next;
+        }
+        return pre;
+    }
+
     /**
      * 迭代解法
      *
@@ -78,7 +98,7 @@ public class ReverseList_24 {
             return head;
         }
         //这里的cur就是最后一个节点
-        ListNode cur = reverseList(head.next);
+        ListNode cur = reverseList2(head.next);
         //这里请配合动画演示理解
         //如果链表是 1->2->3->4->5，那么此时的cur就是5
         //而head是4，head的下一个是5，下下一个是空

@@ -11,7 +11,7 @@ public class StaticInner {
     }
 
     private StaticInner() {
-
+        System.out.println("do init");
     }
 
     public static StaticInner getInstance() {

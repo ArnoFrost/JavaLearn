@@ -6,6 +6,51 @@ package leetcode.sort;
  * @Version 1.0
  */
 public class FindKLargest {
+
+    public int findK(int[] arry, int k) {
+        myquickSort(arry, 0, arry.length, k);
+        return arry[k - 1];
+    }
+
+    private static void myquickSort(int[] arry, int left, int right, int k) {
+        if (left >= right) {
+            return;
+        }
+        int p = arry[left];
+
+        int lt = left;
+        int gt = right + 1;
+
+        int i = left + 1;
+
+        while (i < gt) {
+            if (arry[i] > p) {
+                int temp = arry[i];
+                arry[i] = arry[lt + 1];
+                arry[lt + 1] = temp;
+                lt++;
+                i++;
+            } else if (arry[i] < p) {
+                int temp = arry[i];
+                arry[i] = arry[gt - 1];
+                arry[gt - 1] = temp;
+                gt--;
+            } else {
+                i++;
+            }
+
+            int temp = arry[lt];
+            arry[lt] = arry[left];
+            arry[left] = temp;
+            if (lt > k - 1) {
+                myquickSort(arry, left, lt - 1, k);
+            } else {
+                myquickSort(arry, gt, right, k);
+            }
+        }
+    }
+
+
     public int findKthLargest(int[] nums, int k) {
         //重复的要算
         //那么就考虑三路快速排序(重复值多的情况下适合三路快排)

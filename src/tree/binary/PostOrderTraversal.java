@@ -56,6 +56,29 @@ public class PostOrderTraversal {
         return ret;
     }
 
+    public List<Integer> myPostOrder(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        Stack<TreeNode> tmpStack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            if (node != null) {
+                tmpStack.push(node);
+                stack.push(node.left);
+                stack.push(node.right);
+            }
+        }
+        List<Integer> resultList = new ArrayList<>();
+        while (!tmpStack.isEmpty()) {
+            resultList.add(tmpStack.pop().getVal());
+        }
+        return resultList;
+
+    }
+
     public List<Integer> postOrder(TreeNode root) {
         Deque<TreeNode> stack = new LinkedList<>();
         stack.push(root);

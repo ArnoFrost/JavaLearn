@@ -13,7 +13,7 @@ public class SortTest extends TestCase {
     /**
      * 数组长度
      */
-    private static int ARRAY_LENGTH = 30000;
+    private static int ARRAY_LENGTH = 5;
     /**
      * 有序数字个数
      */
@@ -23,7 +23,7 @@ public class SortTest extends TestCase {
      * 随机数组 注意:避免原地排序浅拷贝带来的问题
      */
 
-    private static int[] randomArray = ArrayUtils.getRadomArray(ARRAY_LENGTH);
+    private static int[] randomArray = ArrayUtils.getRandomArray(ARRAY_LENGTH);
 
     /**
      * 近乎有序数组
@@ -41,9 +41,9 @@ public class SortTest extends TestCase {
 
     public static void main(String[] args) {
         //测试冒泡排序
-        testBubbleSort();
+//        testBubbleSort();
         //测试选择排序
-        testSelectionSort();
+//        testSelectionSort();
         //测试插入排序
 //        testInsertionSort();
         //测试希尔排序
@@ -51,7 +51,7 @@ public class SortTest extends TestCase {
         //测试归并排序
 //        testMergeSort();
         //测试快速快速排序
-//        testQuickSort();
+        testQuickSort();
 
     }
 
@@ -95,7 +95,7 @@ public class SortTest extends TestCase {
 //        QuickSort2Ways.quickSort(repeatArray.clone());
 //        QuickSort3Ways.quickSort(repeatArray.clone());
 
-        QuickSort2Ways.quickSort(badOrderArray.clone());
+//        QuickSort2Ways.quickSort(badOrderArray.clone());
         QuickSort3Ways.quickSort(badOrderArray.clone());
     }
 
