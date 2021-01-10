@@ -1,6 +1,5 @@
 package test.sort;
 
-import junit.framework.TestCase;
 import sort.*;
 import utils.ArrayUtils;
 
@@ -9,7 +8,7 @@ import utils.ArrayUtils;
  * @Date: 2019-05-06 20:35
  * @Version 1.0
  */
-public class SortTest extends TestCase {
+public class SortTest {
     /**
      * 数组长度
      */
