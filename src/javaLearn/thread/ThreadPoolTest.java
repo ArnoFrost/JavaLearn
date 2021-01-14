@@ -1,4 +1,4 @@
-package thread;
+package javaLearn.thread;
 
 import java.util.Random;
 import java.util.concurrent.*;
@@ -90,7 +90,7 @@ public class ThreadPoolTest {
     }
 
     /**
-     * The default thread factory.
+     * The default javaLearn.thread factory.
      */
     private static class DefaultThreadFactory implements ThreadFactory {
         private static final AtomicInteger poolNumber = new AtomicInteger(1);
@@ -105,7 +105,7 @@ public class ThreadPoolTest {
             namePrefix = "group-" + group.getName() +
                     "-pool-" +
                     poolNumber.getAndIncrement() +
-                    "-thread-";
+                    "-javaLearn.thread-";
         }
 
         public Thread newThread(Runnable r) {

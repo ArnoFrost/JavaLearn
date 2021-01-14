@@ -1,4 +1,4 @@
-package thread;
+package javaLearn.thread;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class CyclicBarrierExample {
 
-    //Runnable task for each thread
+    //Runnable task for each javaLearn.thread
     private static class Task implements Runnable {
 
         private CyclicBarrier barrier;
@@ -38,7 +38,7 @@ public class CyclicBarrierExample {
         final CyclicBarrier cb = new CyclicBarrier(3, new Runnable() {
             @Override
             public void run() {
-                //This task will be executed once all thread reaches barrier
+                //This task will be executed once all javaLearn.thread reaches barrier
                 System.out.println("All parties are arrived at barrier, lets play");
             }
         });
@@ -56,7 +56,7 @@ public class CyclicBarrierExample {
             }
         });
         a.start();
-        //starting each of thread
+        //starting each of javaLearn.thread
         Thread t1 = new Thread(new Task(cb), "Thread 1");
         Thread t2 = new Thread(new Task(cb), "Thread 2");
         Thread t3 = new Thread(new Task(cb), "Thread 3");

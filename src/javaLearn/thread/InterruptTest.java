@@ -1,4 +1,4 @@
-package thread;
+package javaLearn.thread;
 
 /**
  * @Author: ArnoFrost
@@ -28,20 +28,20 @@ public class InterruptTest {
             }
         };
         thread.start();
-//        thread.isInterrupted();
+//        javaLearn.thread.isInterrupted();
         thread.interrupt();
         System.out.println("3 is = " + Thread.interrupted());
         System.out.println("4 is = " + Thread.interrupted());
 
 //
-//        Thread thread = new MyThread();
-//        thread.start();
+//        Thread javaLearn.thread = new MyThread();
+//        javaLearn.thread.start();
 //        try {
 //            Thread.sleep(2000);
-//            thread.interrupt();
+//            javaLearn.thread.interrupt();
 //
-//            System.out.println("stop 1??" + thread.interrupted());
-//            System.out.println("stop 2??" + thread.interrupted());
+//            System.out.println("stop 1??" + javaLearn.thread.interrupted());
+//            System.out.println("stop 2??" + javaLearn.thread.interrupted());
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }

@@ -1,4 +1,4 @@
-package thread;
+package javaLearn.thread;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -18,7 +18,7 @@ public class ProducerConsumerPattern {
         Thread prodThread = new Thread(new Producer(sharedQueue));
         Thread consThread = new Thread(new Consumer(sharedQueue));
 //
-//        //Starting producer and Consumer thread
+//        //Starting producer and Consumer javaLearn.thread
         prodThread.start();
         consThread.start();
 

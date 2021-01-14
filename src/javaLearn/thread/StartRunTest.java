@@ -1,4 +1,4 @@
-package thread;
+package javaLearn.thread;
 
 /**
  * @Author: ArnoFrost
@@ -19,7 +19,7 @@ public class StartRunTest {
 
         @Override
         public void run() {
-            System.out.println("thread Name = " + Thread.currentThread().getName());
+            System.out.println("javaLearn.thread Name = " + Thread.currentThread().getName());
         }
     }
 }

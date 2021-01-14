@@ -1,4 +1,4 @@
-package thread;
+package javaLearn.thread;
 
 public class Token {
 
