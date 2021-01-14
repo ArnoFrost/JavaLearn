@@ -15,40 +15,40 @@ public class LearnLock {
         SpinLock lock = new SpinLock();
         Thread threadA = new Thread(() -> {
             lock.lock();
-            System.out.println("thread a lock");
+            System.out.println("javaLearn.thread a lock");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             lock.unlock();
-            System.out.println("thread a unlock");
+            System.out.println("javaLearn.thread a unlock");
 
         });
 
         Thread threadB = new Thread(() -> {
             lock.lock();
-            System.out.println("thread b lock");
+            System.out.println("javaLearn.thread b lock");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             lock.unlock();
-            System.out.println("thread b unlock");
+            System.out.println("javaLearn.thread b unlock");
 
         });
 
         Thread threadC = new Thread(() -> {
             lock.lock();
-            System.out.println("thread c lock");
+            System.out.println("javaLearn.thread c lock");
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             lock.unlock();
-            System.out.println("thread c unlock");
+            System.out.println("javaLearn.thread c unlock");
 
         });
 

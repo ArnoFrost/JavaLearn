@@ -24,7 +24,7 @@ public class SynchronizedBlocked implements Runnable {
         //该线程已持有当前实例锁
         new Thread() {
             public void run() {
-                f(); // Lock acquired by this thread
+                f(); // Lock acquired by this javaLearn.thread
             }
         }.start();
     }

@@ -22,7 +22,7 @@ public class LearnSingle {
         });
         thread.start();
 //        try {
-//            thread.join();
+//            javaLearn.thread.join();
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }

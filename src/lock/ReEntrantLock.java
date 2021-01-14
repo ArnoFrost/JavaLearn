@@ -22,13 +22,13 @@ public class ReEntrantLock {
         //记录锁住的线程
         lockedBy = thread;
 
-        System.out.println("do lock() thread = " + lockedBy.getName() + ",lockedCount = " + lockedCount);
+        System.out.println("do lock() javaLearn.thread = " + lockedBy.getName() + ",lockedCount = " + lockedCount);
     }
 
     public synchronized void unlock() {
         if (Thread.currentThread() == this.lockedBy) {
             lockedCount--;
-            System.out.println("do unlock() thread = " + lockedBy.getName() + ",lockedCount = " + lockedCount);
+            System.out.println("do unlock() javaLearn.thread = " + lockedBy.getName() + ",lockedCount = " + lockedCount);
             //释放锁过程要看所有加锁的地方都释放掉才释放
             if (lockedCount == 0) {
                 isLocked = false;
