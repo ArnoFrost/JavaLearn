@@ -1,4 +1,6 @@
-package design.proxy;
+package design.proxy.staticProxy;
+
+import design.proxy.IPlayerState;
 
 /**
  * @Author: ArnoFrost

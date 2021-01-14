@@ -1,4 +1,4 @@
-package design.proxy;
+package design.proxy.staticProxy;
 
 /**
  * @Author: ArnoFrost

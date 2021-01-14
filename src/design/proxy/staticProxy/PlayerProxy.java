@@ -1,4 +1,6 @@
-package design.proxy;
+package design.proxy.staticProxy;
+
+import design.proxy.IPlayerState;
 
 /**
  * @Author: ArnoFrost
@@ -14,13 +16,16 @@ public class PlayerProxy implements IPlayerState {
 
     @Override
     public void onInit() {
+        System.out.println("代理类 onInit start");
         if (mState != null) {
             mState.onInit();
         }
+        System.out.println("代理类 onInit finish");
     }
 
     @Override
     public void onResume() {
+        System.out.println("代理类 onResume");
         if (mState != null) {
             mState.onResume();
         }
@@ -28,6 +33,7 @@ public class PlayerProxy implements IPlayerState {
 
     @Override
     public void onPause() {
+        System.out.println("代理类 onPause");
         if (mState != null) {
             mState.onPause();
         }
@@ -35,6 +41,7 @@ public class PlayerProxy implements IPlayerState {
 
     @Override
     public void onStop() {
+        System.out.println("代理类 onStop");
         if (mState != null) {
             mState.onStop();
         }
