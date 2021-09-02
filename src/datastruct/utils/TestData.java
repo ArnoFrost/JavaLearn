@@ -10,6 +10,10 @@ import java.util.regex.Pattern;
  */
 public class TestData {
 
+    private static final Pattern P = Pattern.compile("\\s|\t|\r|\n");
+    private static final Pattern P2 = Pattern.compile("^1[0-9|A-Z|a-z]{5}&2[0-9|A-Z|a-z]{5}&3[0-9|A-Z|a-z]{5}&4[0-9|A-Z|a-z]{5}");
+
+
     public static void main(String[] args) {
 //        String content = "1ASDFD&2ASDFG&3ASDFG&4ASDFG";
         String content =
@@ -23,8 +27,7 @@ public class TestData {
     public static String replaceBlank(String str) {
         String dest = "";
         if (str != null) {
-            Pattern p = Pattern.compile("\\s|\t|\r|\n");
-            Matcher m = p.matcher(str);
+            Matcher m = P.matcher(str);
             dest = m.replaceAll("");
         }
         return dest;
@@ -37,12 +40,7 @@ public class TestData {
 
         System.out.println("content == " + content);
         if (content != null) {
-//            Pattern p = Pattern.compile("^1[a-zA-Z0-9_]{5}&2[a-zA-Z0-9_]{5}&3[a-zA-Z0-9_]{5}&4[a-zA-Z0-9_]{5}$");
-            Pattern p = Pattern.compile("^1[0-9|A-Z|a-z]{5}&2[0-9|A-Z|a-z]{5}&3[0-9|A-Z|a-z]{5}&4[0-9|A-Z|a-z]{5}");
-
-
-            Matcher m = p.matcher(content);
-
+            Matcher m = P2.matcher(content);
             return m.find();
         } else {
             return false;

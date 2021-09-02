@@ -9,6 +9,7 @@ public class TestLock {
 
     public TestLock() {
         Thread t1 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     map.put(new Integer(i), i);
@@ -18,6 +19,7 @@ public class TestLock {
         };
 
         Thread t2 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {
@@ -33,6 +35,7 @@ public class TestLock {
         };
 
         Thread t3 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {
@@ -48,6 +51,7 @@ public class TestLock {
         };
 
         Thread t4 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {
@@ -63,6 +67,7 @@ public class TestLock {
         };
 
         Thread t5 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {
@@ -78,6 +83,7 @@ public class TestLock {
         };
 
         Thread t6 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {
@@ -93,6 +99,7 @@ public class TestLock {
         };
 
         Thread t7 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {
@@ -108,6 +115,7 @@ public class TestLock {
         };
 
         Thread t8 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {
@@ -123,6 +131,7 @@ public class TestLock {
         };
 
         Thread t9 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {
@@ -138,6 +147,7 @@ public class TestLock {
         };
 
         Thread t10 = new Thread() {
+            @Override
             public void run() {
                 for (int i = 0; i < TIME; i++) {
                     try {

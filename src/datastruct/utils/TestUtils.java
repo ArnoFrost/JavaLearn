@@ -39,8 +39,8 @@ public class TestUtils {
     }
 
     // 判断一个字符串是否为数字型
+    private static final Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
     public static boolean isInteger(String str) {
-        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
         String json = "";
         return pattern.matcher(str).matches();
     }

@@ -50,14 +50,17 @@ public class BagAsArray<Item> implements Iterable<Item> {
     private class ListIterator implements Iterator<Item> {
         private int i = n - 1;
 
+        @Override
         public boolean hasNext() {
             return i >= 0;
         }
 
+        @Override
         public Item next() {
             return a[i--];
         }
 
+        @Override
         public void remove() {
             throw new UnsupportedOperationException();
         }

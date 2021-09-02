@@ -12,6 +12,7 @@ public class testThread implements Runnable {
         this.type = type;
     }
 
+    @Override
     public void run() {
         if (type == 1)
             so.runSynchronizationMethod1();

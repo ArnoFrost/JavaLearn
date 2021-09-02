@@ -23,12 +23,14 @@ public class SynchronizedBlocked implements Runnable {
     public SynchronizedBlocked() {
         //该线程已持有当前实例锁
         new Thread() {
+            @Override
             public void run() {
                 f(); // Lock acquired by this java.thread
             }
         }.start();
     }
 
+    @Override
     public void run() {
         //中断判断
         while (true) {

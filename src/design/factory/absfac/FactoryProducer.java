@@ -7,9 +7,9 @@ package design.factory.absfac;
  */
 public class FactoryProducer {
     public static AbstractFactory getFactory(String choice) {
-        if (choice.equalsIgnoreCase("SHAPE")) {
+        if ("SHAPE".equalsIgnoreCase(choice)) {
             return new ShapeFactory();
-        } else if (choice.equalsIgnoreCase("COLOR")) {
+        } else if ("COLOR".equalsIgnoreCase(choice)) {
             return new ColorFactory();
         }
         return null;
