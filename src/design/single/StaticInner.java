@@ -1,9 +1,9 @@
 package design.single;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/15 17:01
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/15 17:01
+ * @since 1.0
  */
 public class StaticInner {
     private static class StaticInnerHolder {

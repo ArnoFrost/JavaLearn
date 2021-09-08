@@ -5,9 +5,9 @@ import datastruct.utils.TestUtils;
 import java.util.Arrays;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-07 10:14
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-07 10:14
+ * @since 1.0
  */
 public class BubbleSort {
 

@@ -1,9 +1,9 @@
 package datastruct.node;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 10:27
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 10:27
+ * @since 1.0
  * Code ==> 21. 合并两个有序链表
  * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  *

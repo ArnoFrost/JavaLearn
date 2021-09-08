@@ -4,9 +4,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 14:27
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 14:27
+ * @since 1.0
  * Code ==> 141. 环形链表
  * 给定一个链表，判断链表中是否有环。
  * <p>

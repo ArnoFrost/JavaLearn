@@ -3,9 +3,9 @@ package design.proxy.staticProxy;
 import design.proxy.IPlayerState;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/9 16:57
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/9 16:57
+ * @since 1.0
  */
 public class PlayerProxy implements IPlayerState {
     private IPlayerState mState;

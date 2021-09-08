@@ -4,9 +4,9 @@ import java.util.ArrayDeque;
 import java.util.Iterator;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/8/3 12:01
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/8/3 12:01
+ * @since 1.0
  */
 public class LearnArrayDequeue {
     public static void main(String[] args) {

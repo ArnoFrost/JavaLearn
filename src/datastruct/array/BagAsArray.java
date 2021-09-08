@@ -3,9 +3,9 @@ package datastruct.array;
 import java.util.Iterator;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019/9/16 16:12
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019/9/16 16:12
+ * @since 1.0
  */
 public class BagAsArray<Item> implements Iterable<Item> {
     private Item[] a;            // datastruct.stack entries

@@ -3,9 +3,9 @@ package datastruct.tree;
 import java.util.Stack;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/1 14:11
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/1 14:11
+ * @since 1.0
  */
 
 // 二分搜索树

@@ -1,9 +1,9 @@
 package algo.swap;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/9 22:01
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/9 22:01
+ * @since 1.0
  * <p>
  * 定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
  * <p>

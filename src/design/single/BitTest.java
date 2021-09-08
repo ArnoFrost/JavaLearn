@@ -1,9 +1,9 @@
 package design.single;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/16 12:01
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/16 12:01
+ * @since 1.0
  */
 public class BitTest {
     public static void main(String[] args) {

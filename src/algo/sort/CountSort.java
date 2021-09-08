@@ -1,9 +1,9 @@
 package algo.sort;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/8 10:03
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/8 10:03
+ * @since 1.0
  */
 public class CountSort {
     public void countSort(int[] arr) {

@@ -1,9 +1,9 @@
 package datastruct.utils;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-06 20:43
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-06 20:43
+ * @since 1.0
  * 数组辅助生成类
  */
 public class ArrayUtils {

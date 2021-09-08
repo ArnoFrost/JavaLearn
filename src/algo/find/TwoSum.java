@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/11 21:07
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/11 21:07
+ * @since 1.0
  */
 public class TwoSum {
 

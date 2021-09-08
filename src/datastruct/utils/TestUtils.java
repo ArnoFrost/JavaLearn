@@ -4,9 +4,9 @@ import java.util.Random;
 import java.util.regex.Pattern;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-06 20:38
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-06 20:38
+ * @since 1.0
  * 辅助测试工具类
  */
 public class TestUtils {

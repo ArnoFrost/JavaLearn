@@ -3,9 +3,9 @@ package algo.find;
 import java.util.*;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/10 11:54
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/10 11:54
+ * @since 1.0
  * <p>
  * 给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。
  * <p>

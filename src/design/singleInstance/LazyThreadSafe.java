@@ -1,9 +1,9 @@
 package design.singleInstance;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/7/31 18:07
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/7/31 18:07
+ * @since 1.0
  */
 public class LazyThreadSafe {
     private static LazyThreadSafe INSTANCE;

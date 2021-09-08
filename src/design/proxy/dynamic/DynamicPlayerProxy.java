@@ -4,9 +4,9 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2021/1/14 16:03
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2021/1/14 16:03
+ * @since 1.0
  */
 public class DynamicPlayerProxy implements InvocationHandler {
     private Object object;

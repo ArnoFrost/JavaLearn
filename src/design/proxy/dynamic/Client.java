@@ -6,9 +6,9 @@ import design.proxy.staticProxy.Player;
 import java.lang.reflect.Proxy;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2021/1/14 16:07
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2021/1/14 16:07
+ * @since 1.0
  */
 public class Client {
     public static void main(String[] args) {

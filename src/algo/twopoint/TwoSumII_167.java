@@ -1,9 +1,9 @@
 package algo.twopoint;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/8 10:38
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/8 10:38
+ * @since 1.0
  * <p>
  * <p>
  * 给定一个已按照升序排列的有序数组，找到两个数使得它们相加之和等于目标数。

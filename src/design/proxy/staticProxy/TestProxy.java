@@ -1,9 +1,9 @@
 package design.proxy.staticProxy;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/9 16:59
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/9 16:59
+ * @since 1.0
  */
 public class TestProxy {
     public static void main(String[] args) {

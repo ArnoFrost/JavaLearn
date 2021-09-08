@@ -4,9 +4,9 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/13 11:05
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/13 11:05
+ * @since 1.0
  */
 public class TestQueue {
     public static void main(String[] args) {

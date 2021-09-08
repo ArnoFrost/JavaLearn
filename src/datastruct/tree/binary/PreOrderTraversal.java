@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/18 17:18
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/18 17:18
+ * @since 1.0
  */
 public class PreOrderTraversal {
     /**

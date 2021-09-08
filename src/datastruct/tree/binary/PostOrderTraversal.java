@@ -3,9 +3,9 @@ package datastruct.tree.binary;
 import java.util.*;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/18 18:19
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/18 18:19
+ * @since 1.0
  */
 public class PostOrderTraversal {
     public static List<Integer> preorderTraversal(TreeNode root) {

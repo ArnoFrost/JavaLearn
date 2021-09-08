@@ -1,9 +1,9 @@
 package datastruct.heap;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/3/31 19:57
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/3/31 19:57
+ * @since 1.0
  */
 public class MaxHeap<Item extends Comparable> {
     protected Item[] data;

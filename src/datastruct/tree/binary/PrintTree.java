@@ -3,9 +3,9 @@ package datastruct.tree.binary;
 import java.util.*;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/22 16:10
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/22 16:10
+ * @since 1.0
  */
 public class PrintTree {
     private static final int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};

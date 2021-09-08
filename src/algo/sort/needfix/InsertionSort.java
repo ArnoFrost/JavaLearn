@@ -5,9 +5,9 @@ import datastruct.utils.TestUtils;
 import java.util.Arrays;
 
 /**
- * @Author: ArnoFrost 选择排序(可提前结束,减少交换开销优化)
- * @Date: 2019-05-06 20:30
- * @Version 1.0
+ * @author ArnoFrost 选择排序(可提前结束,减少交换开销优化)
+ * @date 2019-05-06 20:30
+ * @since 1.0
  */
 public class InsertionSort {
 

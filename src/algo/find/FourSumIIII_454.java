@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/10 10:57
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/10 10:57
+ * @since 1.0
  * <p>
  * 给定四个包含整数的数组列表A , B , C , D ,计算有多少个元组 (i, j, k, l)，使得A[i] + B[j] + C[k] + D[l] = 0。
  * <p>

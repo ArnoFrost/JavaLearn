@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/9 20:51
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/9 20:51
+ * @since 1.0
  * 给定一个包含n 个整数的数组nums和一个目标值target，判断nums中是否存在四个元素 a，b，c和 d，使得a + b + c + d的值与target相等？找出所有满足条件且不重复的四元组。
  * <p>
  * 注意：

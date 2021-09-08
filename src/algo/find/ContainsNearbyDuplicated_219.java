@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/10 16:10
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/10 16:10
+ * @since 1.0
  * <p>
  * 给定一个整数数组和一个整数k，判断数组中是否存在两个不同的索引i和j，使得nums [i] = nums [j]，并且 i 和 j的差的 绝对值 至多为 k。
  * <p>

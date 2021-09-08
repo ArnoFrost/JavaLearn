@@ -6,9 +6,9 @@ import datastruct.utils.TestUtils;
 import java.util.Arrays;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/6 13:46
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/6 13:46
+ * @since 1.0
  */
 public class CountInversion {
     //求一个数组中逆序对

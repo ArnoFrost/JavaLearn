@@ -1,9 +1,9 @@
 package algo.sort;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/7 11:58
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/7 11:58
+ * @since 1.0
  */
 public class SortColor_75 {
     public static void main(String[] args) {

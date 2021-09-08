@@ -1,9 +1,9 @@
 package datastruct.queue;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 19:32
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 19:32
+ * @since 1.0
  */
 public class ArrayQueue {
     private String[] items;

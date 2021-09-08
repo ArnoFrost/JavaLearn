@@ -5,9 +5,9 @@ import datastruct.utils.TestUtils;
 import java.util.Arrays;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020-03-27 19:01
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020-03-27 19:01
+ * @since 1.0
  */
 public class SelectionSort {
 

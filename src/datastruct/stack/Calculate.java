@@ -3,9 +3,9 @@ package datastruct.stack;
 import java.util.Stack;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 16:25
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 16:25
+ * @since 1.0
  * Code ==> 227. 基本计算器II
  * <p>
  * 实现一个基本的计算器来计算一个简单的字符串表达式的值。

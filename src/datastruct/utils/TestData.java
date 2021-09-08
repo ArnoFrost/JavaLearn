@@ -4,9 +4,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-06-06 23:00
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-06-06 23:00
+ * @since 1.0
  */
 public class TestData {
 

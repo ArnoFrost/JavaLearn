@@ -6,9 +6,9 @@
 //import datastruct.utils.NodeUtils;
 //
 ///**
-// * @Author: ArnoFrost
-// * @Date: 2019-05-05 11:47
-// * @Version 1.0
+// * @author ArnoFrost
+// * @date 2019-05-05 11:47
+// * @since 1.0
 // */
 //public class TestMiddleNode extends TestCase {
 //    public void testMiddle() {

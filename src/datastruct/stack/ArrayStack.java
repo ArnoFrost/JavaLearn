@@ -3,9 +3,9 @@ package datastruct.stack;
 import java.util.Iterator;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 16:25
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 16:25
+ * @since 1.0
  * 自定义数组实现栈结构
  */
 public class ArrayStack<Item> implements Iterable<Item> {

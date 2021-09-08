@@ -6,9 +6,9 @@ import datastruct.utils.TestUtils;
 import java.util.Arrays;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-07 14:23
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-07 14:23
+ * @since 1.0
  */
 public class QuickSort3Ways {
     public static void quickSort(int[] a) {

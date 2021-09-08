@@ -1,9 +1,9 @@
 package datastruct.heap;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/3/31 20:04
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/3/31 20:04
+ * @since 1.0
  */
 public class TestHeap {
     public static void main(String[] args) {

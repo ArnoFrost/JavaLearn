@@ -1,9 +1,9 @@
 package datastruct.tree.binary;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/22 16:32
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/22 16:32
+ * @since 1.0
  */
 public class TreeNode {
     private int val;

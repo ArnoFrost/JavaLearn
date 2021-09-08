@@ -3,9 +3,9 @@ package datastruct.hash;
 import java.util.*;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/7/29 14:06
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/7/29 14:06
+ * @since 1.0
  */
 public class LearnHash {
     static class Person {

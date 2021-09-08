@@ -1,9 +1,9 @@
 package algo.twopoint;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/7 11:38
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/7 11:38
+ * @since 1.0
  */
 public class RemoveDuplicatedFromSortedArrayII_80 {
     public static void main(String[] args) {

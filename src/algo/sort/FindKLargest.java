@@ -1,9 +1,9 @@
 package algo.sort;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/7 17:25
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/7 17:25
+ * @since 1.0
  */
 public class FindKLargest {
 

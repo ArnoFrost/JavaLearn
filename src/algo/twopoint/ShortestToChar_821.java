@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/8 13:05
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/8 13:05
+ * @since 1.0
  * 给定一个字符串S和一个字符C。返回一个代表字符串S中每个字符到字符串S中的字符C的最短距离的数组。
  * <p>
  * 示例 1:

@@ -1,9 +1,9 @@
 package algo.twopoint;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/8 11:57
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/8 11:57
+ * @since 1.0
  * <p>
  * 给定一个字符串，请你找出其中不含有重复字符的最长子串的长度。
  * <p>

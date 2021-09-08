@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/10 14:09
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/10 14:09
+ * @since 1.0
  */
 public class NumberOfBoomerangs_447 {
     public static void main(String[] args) {

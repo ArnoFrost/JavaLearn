@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/11 21:09
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/11 21:09
+ * @since 1.0
  */
 public class TestFind {
     public static void main(String[] args) {

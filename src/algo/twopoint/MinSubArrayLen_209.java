@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/8 11:11
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/8 11:11
+ * @since 1.0
  * 给定一个含有n个正整数的数组和一个正整数s ，找出该数组中满足其和 ≥ s 的长度最小的连续子数组。如果不存在符合条件的连续子数组，返回 0。
  * <p>
  * 示例:

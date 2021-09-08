@@ -1,9 +1,9 @@
 package design.factory.fac;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/8/5 17:31
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/8/5 17:31
+ * @since 1.0
  */
 public abstract class Machine {
     public abstract String getRAM();

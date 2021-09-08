@@ -1,9 +1,9 @@
 package datastruct.node;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 10:29
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 10:29
+ * @since 1.0
  * Code ==> 206.
  * 反转一个单链表。
  * <p>

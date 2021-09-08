@@ -3,9 +3,9 @@ package algo.sort;
 import datastruct.utils.ArrayUtils;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/6 14:21
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/6 14:21
+ * @since 1.0
  */
 public class FindK {
     /**

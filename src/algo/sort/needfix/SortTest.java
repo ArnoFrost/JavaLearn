@@ -6,9 +6,9 @@ import algo.sort.ShellSort;
 import datastruct.utils.ArrayUtils;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-06 20:35
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-06 20:35
+ * @since 1.0
  */
 public class SortTest {
     /**

@@ -5,9 +5,9 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/17 14:53
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/17 14:53
+ * @since 1.0
  */
 public class TestCompareAble {
     public static final int MAX_LOOP = 5000000;

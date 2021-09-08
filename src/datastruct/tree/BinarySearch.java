@@ -1,9 +1,9 @@
 package datastruct.tree;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/2 19:03
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/2 19:03
+ * @since 1.0
  */
 public class BinarySearch {
     //数据已经排好序

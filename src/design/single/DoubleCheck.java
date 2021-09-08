@@ -1,9 +1,9 @@
 package design.single;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/15 16:54
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/15 16:54
+ * @since 1.0
  */
 public class DoubleCheck {
     public DoubleCheck() {

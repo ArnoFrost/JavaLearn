@@ -3,9 +3,9 @@ package datastruct.queue;
 import datastruct.node.ListNode;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 19:40
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 19:40
+ * @since 1.0
  */
 public class LinkQueue<T> {
     private ListNode front;

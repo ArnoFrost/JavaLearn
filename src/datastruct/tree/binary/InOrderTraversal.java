@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/18 17:48
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/18 17:48
+ * @since 1.0
  * <p>
  * 给定一个二叉树，返回它的中序遍历。
  * <p>

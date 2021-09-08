@@ -1,9 +1,9 @@
 package datastruct.node;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 11:21
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 11:21
+ * @since 1.0
  * Code ==> 876. 求链表中间节点
  * <p>
  * 给定一个带有头结点 head 的非空单链表，返回链表的中间结点。

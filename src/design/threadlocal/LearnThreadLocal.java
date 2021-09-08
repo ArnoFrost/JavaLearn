@@ -3,9 +3,9 @@ package design.threadlocal;
 import java.lang.reflect.Field;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/12 09:57
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/12 09:57
+ * @since 1.0
  */
 public class LearnThreadLocal {
     public static void main(String[] args) throws InterruptedException {

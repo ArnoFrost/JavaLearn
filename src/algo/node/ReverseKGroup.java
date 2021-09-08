@@ -1,9 +1,9 @@
 package algo.node;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2021/1/13 18:09
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2021/1/13 18:09
+ * @since 1.0
  */
 
 

@@ -1,9 +1,9 @@
 package design.proxy;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/9 16:56
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/9 16:56
+ * @since 1.0
  */
 public interface IPlayerState {
     void onInit();

@@ -3,9 +3,9 @@ package datastruct.utils;
 import datastruct.node.ListNode;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2019-05-05 10:28
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2019-05-05 10:28
+ * @since 1.0
  * 链表辅助生成类
  */
 public class NodeUtils {

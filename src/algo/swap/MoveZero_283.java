@@ -1,9 +1,9 @@
 package algo.swap;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/6 19:03
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/6 19:03
+ * @since 1.0
  * 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
  * <p>
  * 示例:

@@ -3,9 +3,9 @@ package algo.find;
 import java.util.HashMap;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/17 10:52
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/17 10:52
+ * @since 1.0
  */
 public class FirstUniqChar_387 {
     public static void main(String[] args) {

@@ -1,9 +1,9 @@
 package datastruct.node;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/19 12:44
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/19 12:44
+ * @since 1.0
  */
 public class DeleteNode {
     public static class Node {

@@ -1,9 +1,9 @@
 package design.singleInstance;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/7/31 18:08
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/7/31 18:08
+ * @since 1.0
  */
 public class DCL {
     private static volatile DCL INSTANCE;

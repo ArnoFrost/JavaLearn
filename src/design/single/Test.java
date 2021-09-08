@@ -3,9 +3,9 @@ package design.single;
 import java.util.Vector;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/4/15 17:40
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/4/15 17:40
+ * @since 1.0
  */
 public class Test {
     public static void main(String[] args) throws InterruptedException {

@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/5/18 19:13
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/5/18 19:13
+ * @since 1.0
  */
 public class LevelOrderTraversal {
     public List<List<Integer>> levelOrder(TreeNode root) {

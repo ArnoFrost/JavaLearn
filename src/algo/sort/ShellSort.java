@@ -5,9 +5,9 @@ import datastruct.utils.TestUtils;
 import java.util.Arrays;
 
 /**
- * @Author: ArnoFrost
- * @Date: 2020/3/28 10:54
- * @Version 1.0
+ * @author ArnoFrost
+ * @date 2020/3/28 10:54
+ * @since 1.0
  */
 public class ShellSort {
 
