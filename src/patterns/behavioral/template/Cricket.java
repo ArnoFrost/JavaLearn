@@ -8,6 +8,11 @@
 
 package patterns.behavioral.template;
 
+/**
+ * @author ArnoFrost
+ * @since 2021/9/14 11:53
+ * 模板模式 蟋蟀游戏
+ */
 public class Cricket extends Game {
 
     @Override

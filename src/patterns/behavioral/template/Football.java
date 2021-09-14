@@ -7,7 +7,11 @@
  */
 
 package patterns.behavioral.template;
-
+/**
+ * @author ArnoFrost
+ * @since 2021/9/14 11:53
+ * 模板模式 足球游戏
+ */
 public class Football extends Game {
 
     @Override

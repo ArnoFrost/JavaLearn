@@ -16,14 +16,25 @@ package patterns.behavioral.template;
  * @since 1.0
  */
 public abstract class Game {
+    /**
+     * 初始化
+     */
     abstract void initialize();
 
+    /**
+     * 开始游玩
+     */
     abstract void startPlay();
 
+    /**
+     * 结束游戏
+     */
     abstract void endPlay();
 
     /**
      * play方法模板
+     * note:这个顺序一定是固定的 即方法要final修饰 子类只能修改方法
+     * 却不能修改调用顺序
      */
     public final void play() {
         initialize();
