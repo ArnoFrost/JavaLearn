@@ -23,6 +23,7 @@ import java.util.List;
 
 /**
  * 学习通配符使用
+ * 原则PECS (Producer Extends Consumer Super)
  *
  * @author xuxin14
  * @date 2023/01/20
@@ -91,5 +92,24 @@ public class LearnWildcardUse {
         Object object = list1.get(0);
         //运行强转风险 有读取歧义
         Female female = (Female) list2.get(0);
+    }
+
+    /**
+     * 通配符
+     * 1. 允许指向所有类型 入参和泛型相关的都不能使用
+     * 2. 禁止存储因为存储时会有歧义
+     * 3. 可以读取,但返回值和泛型相关的都只能用Object接收（只能强转为Object）
+     */
+    public void testWildcard() {
+        // 1. 允许指向所有类型
+        List<?> list1 = humanList;
+        List<?> list2 = speakingList;
+        List<?> list3 = swimmingList;
+        List<?> list4 = maleList;
+        List<?> list5 = femaleList;
+        //2. 禁止存储,因为存储时会有歧义
+//        list1.add(new Human());
+        //3. 可以读取,但读取的类型是Object
+        Object object = list1.get(0);
     }
 }
