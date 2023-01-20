@@ -7,8 +7,8 @@ package datastruct.heap;
  */
 public class TestHeap {
     public static void main(String[] args) {
-        MaxHeap heap = new MaxHeap(100);
-        MinHeap minHeap = new MinHeap(100);
+        MaxHeap<Integer> heap = new MaxHeap<>(100);
+        MinHeap<Integer> minHeap = new MinHeap<>(100);
 
 //        for (int i = 0; i < 30; i++) {
 //            datastruct.heap.insert(TestUtils.getRandomNumber(1, 100));

@@ -5,7 +5,7 @@ package datastruct.heap;
  * @date 2020/3/31 19:57
  * @since 1.0
  */
-public class MaxHeap<Item extends Comparable> {
+public class MaxHeap<Item extends Comparable<Item>> {
     protected Item[] data;
     protected int count;
     protected int capacity;
