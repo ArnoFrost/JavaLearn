@@ -44,6 +44,27 @@ public class LearnWildcardUse {
     //endregion
 
     /**
+     * 简单泛型
+     */
+    private void testGenericNormal() {
+        List<Human> testList;
+
+        testList = humanList;
+        //1. 禁止指向其他类型
+//        testList = maleList;
+//        testList = speakingList;
+
+        //2. 允许存储 本身与子类,由于多态造成
+        testList.add(new Male());
+        //不允许存储超类
+//        testList.add(new Object());
+        //3. 允许获取,获取为简单泛型约束类型
+        Human human = testList.get(0);
+
+
+    }
+
+    /**
      * 上界通配符
      * 1. 允许指向? 类型以及子类型
      * 2. 禁止存储,因为存储时会有歧义
@@ -51,22 +72,23 @@ public class LearnWildcardUse {
      */
     public void testUpperBoundWildcard() {
         // 1. 允许指向? 类型以及子类型
-        List<? extends Human> list1 = humanList;
-        List<? extends Human> list2 = maleList;
+        List<? extends Human> testList;
+        testList = humanList;
+        testList = maleList;
         // 编译错误 不允许指向超类型
-//        List<? extends Human> list3 = speakingList;
-//         编译错误 不允许指向超类型
-//        List<? extends Human> list4 = swimmingList;
+//        testList = speakingList;
+//        testList = swimmingList;
         // 2. 禁止存储,因为存储时会有歧义
-//         list1.add(new Human());
-//         list1.add(new Parrot());
-//         list1.add(new Dolphin());
+        // 歧义点在于不知道 testList 属于哪个具体的多态List 无法确定存储的类型
+//        testList.add(new Human());
+//        testList.add(new Male());
+//        testList.add(new Female());
         // 3. 可以读取,但读取的类型是上界类型
-        Human human = list1.get(0);
-        Speaking speaking = list2.get(0);
-        Human human2 = list2.get(0);
-        //运行强转风险 有获取歧义
-        Male male = (Male) list2.get(0);
+        Human human = testList.get(0);
+        Speaking speaking = testList.get(0);
+        Swimming swimming = testList.get(0);
+        //运行强转风险 有获取歧义 无法确定获取的类型
+//        Male male = testList.get(0);
     }
 
 
@@ -78,20 +100,24 @@ public class LearnWildcardUse {
      */
     public void testLowerBoundWildcard() {
         // 1. 允许指向? 类型以及父类型
-        List<? super Human> list1 = humanList;
-        List<? super Human> list2 = speakingList;
-        List<? super Human> list3 = swimmingList;
+        List<? super Human> testList;
+        testList = humanList;
+        testList = speakingList;
+        testList = swimmingList;
         // 编译错误 不允许指向子类型
-//        List<? super Human> list4 = maleList;
+//        testList = maleList;
+//        testList = femaleList;
         //2. 可以存储,但存储的类型是下界类型
-        list1.add(new Human());
-        list2.add(new Male());
+        testList.add(new Human());
+        testList.add(new Male());
+        testList.add(new Female());
         // 编译错误 不允许存储超类型
-//        list3.add(new Dolphin());
+//        testList.add(new Dolphin());
+//        testList.add(new Parrot());
         //3. 可以读取,但读取的类型是Object
-        Object object = list1.get(0);
-        //运行强转风险 有读取歧义
-        Female female = (Female) list2.get(0);
+        Object object = testList.get(0);
+        //运行强转风险 有读取歧义 无法确定读取的类型
+//        Female female = testList.get(0);
     }
 
     /**
@@ -102,14 +128,16 @@ public class LearnWildcardUse {
      */
     public void testWildcard() {
         // 1. 允许指向所有类型
-        List<?> list1 = humanList;
-        List<?> list2 = speakingList;
-        List<?> list3 = swimmingList;
-        List<?> list4 = maleList;
-        List<?> list5 = femaleList;
-        //2. 禁止存储,因为存储时会有歧义
-//        list1.add(new Human());
+        List<?> testList;
+        testList = humanList;
+        testList = speakingList;
+        testList = swimmingList;
+        testList = maleList;
+        testList = femaleList;
+        //2. 禁止存储,因为存储时会有歧义 歧义点在于不知道 testList 属于哪个具体的多态List 无法确定存储的类型
+//        testList.add(new Human());
+//        testList.add(new Female());
         //3. 可以读取,但读取的类型是Object
-        Object object = list1.get(0);
+        Object object = testList.get(0);
     }
 }
